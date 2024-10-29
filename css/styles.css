@@ -1122,6 +1122,7 @@ body.light-mode .logo-light {
 .carousel-nav {
   position: absolute;
   top: 50%;
+  right:20%;
   width: 100%;
   display: flex;
   justify-content: space-between;
