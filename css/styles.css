@@ -89,28 +89,25 @@ nav {
 
 nav h2 {
   color: var(--text-color);
-  font-size: 1.8em;
+  font-size: 1.2em;
   z-index: 1004;
 }
 
 /* Navigation Links */
 nav .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  padding: 0;
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  position: fixed;
-  left: 50%;
+  position: fixed; /* Ensure the menu overlays the content */
   top: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  z-index: 1001;
+  left: 70%;
+  transform: translate(-50%, -10%) scale(0.1); /* Initially centered */
+  background-color: var(--form-background);
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  display: flex;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 50px;
-  border-radius: 10px;
+  gap: 15px;
+  z-index: 1001;
 }
 
 
@@ -119,6 +116,7 @@ nav .nav-links.show-links {
   transform: translateX(0);
   opacity: 1;
 }
+
 
 /* Navigation Links Items */
 nav .nav-links li {
@@ -135,10 +133,22 @@ nav .nav-links li a {
   transition: color 0.3s ease;
 }
 
+/* Active Navigation Link */
+nav .nav-links li a.active {
+  color: #800000; /* Maroon color */
+  font-weight: 700; /* Optional: Make the active link bold */
+}
 
 nav .nav-links li a:hover {
   color: var(--nav-link-hover-color) !important;
 }
+
+
+/* Active State Hover Effect */
+nav .nav-links li a.active:hover {
+  color: #800000 !important; /* Maintain active color on hover */
+}
+
 
 nav .nav-links li a::after {
   content: '';
@@ -154,10 +164,20 @@ nav .nav-links li a::after {
   transform: scaleX(0);
 }
 
-nav .nav-links li a:hover::after {
+nav .nav-links li a:hover::after,
+nav .nav-links li a.active::after {
   transform: scaleX(1);
+  background: #800000; /* Maroon underline */
 }
 
+.logo-image{
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 /* Theme Toggle Switch Styles */
 .theme-toggle {
@@ -234,15 +254,25 @@ body.light-mode nav {
 
 body.light-mode nav h2,
 body.light-mode nav .nav-links li a {
-  color: #000000;
+  background-color: rgba(255, 255, 255, 0);
+  color: #000;
 }
 
 body.light-mode nav .nav-links li a::after {
   background: #000000;
 }
 
-body.light-mode nav .nav-links li a:hover {
-  color: rgb(216, 27, 27);
+body.light-mode nav .nav-links a:hover {
+  color: var(--primary-color);
+}
+
+body.light-mode nav .nav-links li a.active {
+  color: #800000; /* Maroon color */
+}
+
+body.light-mode nav .nav-links li a:hover::after,
+body.light-mode nav .nav-links li a.active::after {
+  background: #800000; /* Maroon underline */
 }
 
 body.light-mode .hero-section {
@@ -313,7 +343,7 @@ body.light-mode .view-all-button:hover {
 .light-mode .burger span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: #000;
   border-radius: 9px;
@@ -328,8 +358,8 @@ body.light-mode .view-all-button:hover {
   position: fixed;
   top: 20px;
   right: 20px;
-  width: 40px;
-  height: 30px;
+  width: 30px;
+  height: 20px;
   background: transparent;
   cursor: pointer;
   display: block;
@@ -343,7 +373,7 @@ body.light-mode .view-all-button:hover {
 .burger span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: #fff;
   border-radius: 9px;
@@ -403,7 +433,7 @@ nav .nav-links {
 /* Show Menu When Burger is Checked */
 #nav-toggle:checked ~ nav .nav-links {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -10%) scale(1);
 }
 
 /* Ensure Sections Stack Correctly */
@@ -789,7 +819,7 @@ section {
   padding: 100px 20px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px;
+
 }
 
 .trusted-title {
@@ -809,7 +839,7 @@ section {
   font-size: 1.5em;
   color: #ddd;
   text-align: center;
-  margin-bottom: 60px;
+ 
   position: relative;
   z-index: 2;
 }
@@ -908,6 +938,14 @@ section {
   .logos-slider {
       gap: 40px;
   }
+  .intro-text {
+    font-size: 1.0em;
+    margin: 0px;
+    padding: 20px 15px;
+    text-align: justify;
+    text-justify: inter-word; /* Adds more natural spacing */
+    hyphens: auto; /* Allows hyphenation to reduce spacing gaps */
+  }
 }
 
 
@@ -968,7 +1006,6 @@ body.light-mode .logo-light {
   padding: 100px 20px;
   position: relative;
   overflow: hidden;
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -988,7 +1025,6 @@ body.light-mode .logo-light {
   font-size: 1.5em;
   color: #dddddd;
   text-align: center;
-  margin-bottom: 60px;
   position: relative;
   z-index: 2;
 }
@@ -1791,6 +1827,14 @@ section {
   color: #fff !important;
 }
 
+nav .nav-links li a{
+  font-size:0.9em;
+}
+
+body.light-mode nav .nav-links li a{
+  color: #000 !important;
+}
+
 }
 
 
@@ -1806,9 +1850,12 @@ section {
   }
   nav .nav-links {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    top: 70px; /* Position below the burger icon */
+    left: 20px;
+    transform: translate(0, 0) scale(1);
     position: static;
     flex-direction: row;
+    align-items: flex-start;
     background: transparent;
     padding: 0;
   }
@@ -1816,11 +1863,21 @@ section {
     margin: 0;
   }
   nav .nav-links li a {
-    font-size: 1.1em;
-    padding: 10px 15px;
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+  nav h2 {
+    font-size: 0.9em !important;
   }
 
   
+
+
+#nav-toggle:checked ~ nav .nav-links {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
 }
 
 
@@ -1836,7 +1893,7 @@ section {
   transition: background-color 0.3s ease, color 0.3s ease;
   position: relative;
   overflow: hidden;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
 
@@ -2612,8 +2669,8 @@ body.light-mode .footer-social {
 
 /* Back to Top Button Styling */
 .Btn {
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: var(--btn-bg-dark);
   display: flex;
   align-items: center;
