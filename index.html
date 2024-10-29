@@ -1035,39 +1035,97 @@ logosSlider.addEventListener('mouseleave', () => {
 
 
 
+
+
+
+
+
+
 // Carousel Functionality
-document.addEventListener('DOMContentLoaded', () => {
+
+    // === Carousel Navigation Functionality ===
+
+    // Select carousel navigation buttons
+    const prevButton = document.querySelector('.carousel-nav .prev');
+    const nextButton = document.querySelector('.carousel-nav .next');
+
+    // Select testimonials container and items
     const testimonialsContainer = document.querySelector('.testimonials-container');
     const testimonials = document.querySelectorAll('.testimonial-item');
-    const prevButton = document.querySelector('.nav-button.prev');
-    const nextButton = document.querySelector('.nav-button.next');
     let currentIndex = 0;
     const totalTestimonials = testimonials.length;
 
+    // Function to update carousel position
     function updateCarousel() {
         testimonialsContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
 
-    prevButton.addEventListener('click', () => {
+    // Function to navigate to previous testimonial
+    function navigatePrev() {
         currentIndex = (currentIndex === 0) ? totalTestimonials - 1 : currentIndex - 1;
         updateCarousel();
-    });
+    }
 
-    nextButton.addEventListener('click', () => {
+    // Function to navigate to next testimonial
+    function navigateNext() {
         currentIndex = (currentIndex + 1) % totalTestimonials;
         updateCarousel();
-    });
+    }
 
-    // Initialize positions
-    updateCarousel();
+    // Function to add event listeners to navigation buttons
+    function addNavEventListeners() {
+        if (prevButton && nextButton) {
+            prevButton.addEventListener('click', navigatePrev);
+            nextButton.addEventListener('click', navigateNext);
+        }
+    }
 
-    // Auto-play functionality (optional)
-    let autoplay = setInterval(() => {
-        nextButton.click();
-    }, 9000); // Change testimonial every 7 seconds
+    // Function to remove event listeners from navigation buttons
+    function removeNavEventListeners() {
+        if (prevButton && nextButton) {
+            prevButton.removeEventListener('click', navigatePrev);
+            nextButton.removeEventListener('click', navigateNext);
+        }
+    }
 
-    // Pause on hover
-    testimonialsContainer.addEventListener('mouseenter', () => {
+    // Function to handle carousel navigation based on screen width
+    function handleCarouselNavigation() {
+        if (window.innerWidth > 768) { // Desktop view
+            addNavEventListeners();
+
+            // Start auto-play
+            startAutoplay();
+        } else { // Mobile view
+            removeNavEventListeners();
+
+            // Stop auto-play
+            stopAutoplay();
+        }
+    }
+
+    // === Auto-Play Functionality ===
+
+    let autoplayInterval;
+
+    // Function to start auto-play
+    function startAutoplay() {
+        if (!autoplayInterval) { // Prevent multiple intervals
+            autoplayInterval = setInterval(() => {
+                navigateNext();
+            }, 9000); // Change testimonial every 9 seconds
+        }
+    }
+
+    // Function to stop auto-play
+    function stopAutoplay() {
+        if (autoplayInterval) {
+            clearInterval(autoplayInterval);
+            autoplayInterval = null;
+        }
+    }
+
+        // Pause on hover
+        testimonialsContainer.addEventListener('mouseenter', () => {
         clearInterval(autoplay);
     });
 
@@ -1077,15 +1135,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5000);
     });
 
-    // Keyboard Navigation (Optional)
+    // Initialize carousel navigation on load
+    handleCarouselNavigation();
+
+    // Update carousel navigation on window resize
+    window.addEventListener('resize', handleCarouselNavigation);
+
+    // Initialize positions
+    updateCarousel();
+
+    // === Pause Auto-Play on Hover (Desktop Only) ===
+
+
+    // === Keyboard Navigation (Optional) ===
+
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            prevButton.click();
-        } else if (e.key === 'ArrowRight') {
-            nextButton.click();
+        if (window.innerWidth > 768) { // Only enable on desktop
+            if (e.key === 'ArrowLeft') {
+                navigatePrev();
+            } else if (e.key === 'ArrowRight') {
+                navigateNext();
+            }
         }
     });
-});
+
 
 
 // Animated Progress Bars

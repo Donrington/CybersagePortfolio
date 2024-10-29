@@ -1032,6 +1032,7 @@ body.light-mode .logo-light {
 /* Testimonials Container */
 .testimonials-container {
   display: flex;
+  margin-top: 90px;
   transition: transform 0.5s ease-in-out;
   width: 100%;
 }
@@ -1195,6 +1196,16 @@ body.light-mode .nav-button:hover {
   background: rgba(0, 0, 0, 0.2);
   color: #ffffff;
 }
+
+
+
+@media (max-width: 768px) {
+  .carousel-nav {
+    display: none;
+  }
+}
+
+
 
 /* Developer Skills Section */
 .developer_skills {
@@ -1742,6 +1753,27 @@ body.light-mode .developer_skills .skill-progress-bar[data-progress]::after {
   }
 }
 
+@media (max-width: 768px) {
+  .testimonials-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding: 20px 0; /* Optional: Adjust padding for better spacing */
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-item {
+    min-width: 100%;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    padding: 10px; /* Optional: Adjust padding for better spacing */
+  }
+}
+
+
+
 /* Light Mode Adjustments for History Section */
 body.light-mode .history-section {
   background-color: var(--project-section-background);
@@ -1814,7 +1846,7 @@ section {
   }
 
   .word{
-    font-size: 28vw;
+    font-size: 29vw;
   }
   .hero-title{
     font-size: 4px !important;
