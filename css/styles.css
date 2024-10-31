@@ -1,5 +1,4 @@
 
-
 /* General Reset */
 * {
   margin: 0;
@@ -426,6 +425,8 @@ nav h2 {
 nav .nav-links {
   z-index: 1002;
 }
+
+
 
 
 
@@ -1754,6 +1755,9 @@ body.light-mode .developer_skills .skill-progress-bar[data-progress]::after {
   }
 }
 
+
+
+
 @media (max-width: 768px) {
   .testimonials-container {
     display: flex;
@@ -1802,10 +1806,7 @@ body.light-mode .history-section .timeline-content p {
   color: var(--text-color);
 }
 
-/* Skills Section */
-.skills-section {
-  /* Add styles as needed */
-}
+
 
 /* Ensure No Overlapping */
 section {
@@ -2755,7 +2756,7 @@ body.light-mode .arrow path {
 }
 
 body.light-mode .text {
-  color: var(--btn-text-color-light);
+  color: #000;
   background: rgba(255, 255, 255, 0.8);
 }
 
