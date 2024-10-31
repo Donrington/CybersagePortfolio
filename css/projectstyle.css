@@ -45,7 +45,7 @@ body {
   body.light-mode {
     --background-color: #ffffff; /* Light mode background */
     --text-color: #000000; /* Light mode text color */
-    --nav-background: rgba(255, 255, 255, 0.9);
+    --nav-background: rgba(255, 255, 255, 0.6);
     --nav-link-hover-color: #d10303;
     --divider-color: rgba(0, 0, 0, 0.2);
     --enhanced-title-gradient: linear-gradient(to right, #d10303, #800000);
@@ -83,10 +83,10 @@ nav {
   /* Navigation Links */
   nav .nav-links {
     position: fixed; /* Ensure the menu overlays the content */
-    top: 50%;
-    left: 70%;
+    top: 100%;
+    left: 75%;
     transform: translate(-50%, -10%) scale(0.1); /* Initially centered */
-    background-color: var(--form-background);
+    background-color: var(--nav-background);
     padding: 20px;
     border-radius: 8px;
     opacity: 0;
@@ -244,6 +244,9 @@ nav {
     background-color: rgba(255, 255, 255, 0);
     color: #000;
   }
+
+ 
+  
   
   body.light-mode nav .nav-links li a::after {
     background: #000000;
@@ -395,6 +398,8 @@ nav {
     nav h2 {
       font-size: 0.9em !important;
     }
+
+  
   
 }  
 /* Container */

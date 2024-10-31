@@ -384,6 +384,29 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+const sections = document.querySelectorAll('section[id]');
+
+// Add an event listener listening for scroll
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100; // Adjust this value based on header height
+        if (window.pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    // Remove 'active' class from all nav links
+    document.querySelectorAll('nav .nav-links li a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
+
+
 
     </script>
 </body>
