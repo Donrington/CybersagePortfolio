@@ -75,6 +75,54 @@
     
 <body>
 
+
+    <body>
+        <!-- Page Loader -->
+        <div class="page-loader">
+            <div class="loader">
+           
+                <div class="loader-container">
+                    <div class="carousel">
+                        <div class="love"></div>
+                        <div class="love"></div>
+                        <div class="love"></div>
+                        <div class="love"></div>
+                        <div class="love"></div>
+                        <div class="love"></div>
+                        <div class="love"></div>
+                    </div> 
+                </div>
+                <div class="loader-container">
+                    <div class="carousel">
+                        <div class="death"></div>
+                        <div class="death"></div>
+                        <div class="death"></div>
+                        <div class="death"></div>
+                        <div class="death"></div>
+                        <div class="death"></div>
+                        <div class="death"></div>
+                    </div> 
+                </div>
+                <div class="loader-container">
+                    <div class="carousel">
+                        <div class="robots"></div>
+                        <div class="robots"></div>
+                        <div class="robots"></div>
+                        <div class="robots"></div>
+                        <div class="robots"></div>
+                        <div class="robots"></div>
+                        <div class="robots"></div>
+                    </div> 
+                </div>
+                
+            </div>
+        </div>
+    
+
+    
+        <!-- Navigation Bar -->
+        <!-- ... rest of your HTML content ... -->
+    
    <!-- Menu Trigger -->
    <div class="container">
     <div class="bars"></div>
@@ -300,35 +348,36 @@
                 <!-- Project 2 -->
                 <div class="project-item size-medium" data-aos="fade-up" data-aos-delay="400">
                     <div class="project-image-wrapper">
-                        <a href="project2-page.html">
-                            <img src="neon4.jpg" alt="Project 2" class="project-image">
+                        <a href="project3.html">
+                            <img src="projects/handyman3.jpg" alt="Project 2" class="project-image">
                             <div class="overlay">
                                 <div class="project-info">
                                     <i class="project-icon fas fa-code"></i>
-                                    <h3 class="project-title">Project Title Two</h3>
-                                    <p class="project-categories">Web Development, Landing Page</p>
+                                    <h3 class="project-title">All A Handyman & Contractor</h3>
+                                    <p class="project-categories">Web Development, Company Portfolio</p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <p class="project-quote"><em>"Engaging digital journeys."</em></p>
+                    <p class="project-quote"><em>"Building Your Vision
+                        Recreating Your Imagination."</em></p>
                 </div>
 
                        <!-- Project 3 - Standalone -->
             <div class="project-item size-large standalone-left" data-aos="fade-up" data-aos-delay="600">
                 <div class="project-image-wrapper">
                     <a href="project3-page.html">
-                        <img src="neon6.jpg" alt="Project 3" class="project-image">
+                        <img src="projects/resuglow1.jpg" alt="Project 3" class="project-image">
                         <div class="overlay">
                             <div class="project-info">
                                 <i class="project-icon fas fa-shopping-cart"></i>
-                                <h3 class="project-title">Project Title Three</h3>
-                                <p class="project-categories">Responsive Design, E-Commerce</p>
+                                <h3 class="project-title">ResuGlow</h3>
+                                <p class="project-categories">Web Development, Utility</p>
                             </div>
                         </div>
                     </a>
                 </div>
-                <p class="project-quote"><em>"Designs that drive sales."</em></p>
+                <p class="project-quote"><em>"Build Your Professional Resume."</em></p>
             </div>
             </div>
 
@@ -736,7 +785,7 @@
         
         <!-- Contact Form -->
         <div class="form-container" data-aos="fade-up" data-aos-delay="600">
-            <form class="form" id="contactForm">
+            <form class="form" id="contactForm" action="https://formsubmit.co/carryoby@gmail.com">
                 <div class="form-group">
                     <label for="email">Company Email<span class="required">*</span></label>
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
@@ -776,8 +825,8 @@
             <!-- Contact Information -->
             <div class="footer-contact">
                 <h4>Contact Us</h4>
-                <p>Email: <a href="mailto:contact@cybersage.com">contact@cybersage.com</a></p>
-                <p>Phone: <a href="tel:+12345678901">+1 (234) 567-8901</a></p>
+                <p>Email: <a href="mailto:contact@cybersage.com">carryoby@gmail.com</a></p>
+                <p>Phone: <a href="tel:+12345678901">+234 (702) 549-5506</a></p>
             </div>
 
             <!-- Social Media Links -->
@@ -955,71 +1004,79 @@ VanillaTilt.init(document.querySelectorAll('.project-item'), {
 
 // Existing JavaScript code...
 
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('themeToggle');
 
-        // Theme Toggle Functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const themeToggle = document.getElementById('themeToggle');
+    if (!themeToggle) {
+        console.error('Theme toggle checkbox not found!');
+        return;
+    }
 
-            if (!themeToggle) {
-                console.error('Theme toggle checkbox not found!');
-                return;
+    /**
+     * Function to set the theme.
+     * @param {string} theme - 'light' or 'dark'
+     */
+    function setTheme(theme) {
+        if (theme === 'light') {
+            document.body.classList.add('light-mode');
+            themeToggle.checked = true;
+        } else {
+            document.body.classList.remove('light-mode');
+            themeToggle.checked = false;
+        }
+    }
+
+    /**
+     * Function to determine the initial theme.
+     * Checks localStorage for user preference.
+     * If none, uses prefers-color-scheme media query.
+     */
+    function determineTheme() {
+        const userPreference = localStorage.getItem('theme');
+
+        if (userPreference) {
+            // Use user's saved preference
+            setTheme(userPreference);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            // Use system preference
+            setTheme('light');
+        } else {
+            // Default to dark theme
+            setTheme('dark');
+        }
+    }
+
+    /**
+     * Event listener for theme toggle switch.
+     * Saves user preference to localStorage.
+     */
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            setTheme('light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            setTheme('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+
+    // Initialize theme on page load
+    determineTheme();
+
+    // Listen for system theme changes
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            const newColorScheme = e.matches ? 'dark' : 'light';
+            const userPreference = localStorage.getItem('theme');
+
+            // Only change theme if user hasn't set a preference
+            if (!userPreference) {
+                setTheme(newColorScheme);
             }
-
-            /**
-             * Function to set the theme.
-             * @param {string} theme - 'light' or 'dark'
-             */
-            function setTheme(theme) {
-                if (theme === 'light') {
-                    document.body.classList.add('light-mode');
-                    themeToggle.checked = true;
-                } else {
-                    document.body.classList.remove('light-mode');
-                    themeToggle.checked = false;
-                }
-            }
-
-            /**
-             * Function to determine the initial theme.
-             * Checks localStorage for user preference.
-             * If none, sets based on current time.
-             */
-            function determineTheme() {
-                const userPreference = localStorage.getItem('theme');
-
-                if (userPreference) {
-                    // Use user's saved preference
-                    setTheme(userPreference);
-                } else {
-                    // Determine based on time
-                    const currentHour = new Date().getHours();
-                    if (currentHour >= 6 && currentHour < 18) {
-                        // Day time: 6 AM to 6 PM
-                        setTheme('light');
-                    } else {
-                        // Night time: 6 PM to 6 AM
-                        setTheme('dark');
-                    }
-                }
-            }
-
-            /**
-             * Event listener for theme toggle switch.
-             * Saves user preference to localStorage.
-             */
-            themeToggle.addEventListener('change', () => {
-                if (themeToggle.checked) {
-                    setTheme('light');
-                    localStorage.setItem('theme', 'light');
-                } else {
-                    setTheme('dark');
-                    localStorage.setItem('theme', 'dark');
-                }
-            });
-
-            // Initialize theme on page load
-            determineTheme();
         });
+    }
+});
 
 // Pause and Resume Scrolling on Hover
 const logosSlider = document.querySelector('.logos-slider');
@@ -1215,7 +1272,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
- 
+window.addEventListener('load', function() {
+    const pageLoader = document.querySelector('.page-loader');
+    if (pageLoader) {
+        setTimeout(() => {
+            pageLoader.style.opacity = '0';
+            pageLoader.style.visibility = 'hidden';
+            pageLoader.style.transition = 'opacity 0.5s ease-out';
+            // Remove the loader from the DOM after the transition
+            setTimeout(() => {
+                pageLoader.parentNode.removeChild(pageLoader);
+            }, 500);
+        }, 2000); // Loader will display for at least 1 second
+    }
+});
+
 
 
 </script>

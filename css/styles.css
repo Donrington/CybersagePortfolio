@@ -46,6 +46,16 @@ body.light-mode {
   --social-icon-hover:  #d10303;
 }
 
+/* Light Mode Overrides */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #ffffff; /* Light mode background */
+    --text-color: #000000; /* Light mode text color */
+    /* ... other variables ... */
+  }
+}
+
+
 /* Body Styles */
 body {
   font-family: "Montserrat", sans-serif;
@@ -2773,5 +2783,261 @@ body.light-mode .text {
   100% {
       transform: translateY(0);
       opacity: 1;
+  }
+}
+
+
+
+/* Loader Styles */
+.page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-color); /* Use CSS variable */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+.loader {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 55px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.loader .loader-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  position: relative;
+  align-items: center;
+}
+
+.loader .carousel {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  transform-origin: center;
+}
+
+.loader .loader-container:nth-child(3) {
+  justify-content: flex-start;
+  justify-items: flex-start;
+  animation: scroll-up 4s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+.loader .loader-container:nth-child(2) {
+  justify-content: flex-end;
+  justify-items: flex-end;
+  animation: scroll-down 4s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+.loader .loader-container:nth-child(1) {
+  justify-content: flex-end;
+  justify-items: flex-end;
+  animation: scroll-down 3s infinite ease-in-out;
+  animation-delay: 1s;
+}
+
+.love {
+  background: red;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  left: 8px;
+  margin: 0.8rem 4px;
+  transform: rotate(45deg);
+}
+
+.love::before, .love::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: red;
+}
+
+.love::before {
+  left: -16px;
+}
+
+.love::after {
+  top: -16px;
+}
+
+.death {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  animation: rotation 3s infinite ease-in-out;
+}
+
+.death::after {
+  content: '';
+  height: 63px;
+  position: absolute;
+  border-left: 12px solid red;
+  transform: rotate(45deg);
+  border-radius: 8px;
+  top: -4px;
+}
+
+.death::before {
+  content: '';
+  height: 60px;
+  position: absolute;
+  border-left: 12px solid red;
+  transform: rotate(-45deg);
+}
+
+
+.robots {
+  display: flex;
+  width: 100%;
+  height: 55px;
+  justify-content: space-between;
+  background-color: #ff0000;
+  border-radius: 0 8px 8px;
+  padding: 8px;
+  animation-delay: 5s;
+}
+
+.robots::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation-delay: 2s;
+  animation: blink 0.5s 2 forwards;
+}
+
+.robots::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation-delay: 2s;
+  animation: blink 0.5s 2 forwards;
+}
+
+
+@keyframes scroll-up {
+  0% {
+      transform: translateY(0);
+      filter: blur(0);
+  }
+  30% {
+      transform: translateY(-150%);
+      filter: blur(10px);
+  }
+  60% {
+      transform: translateY(0);
+      filter: blur(0px);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+      transform: translateY(0);
+      filter: blur(0);
+  }
+  30% {
+      transform: translateY(150%);
+      filter: blur(10px);
+  }
+  60% {
+      transform: translateY(0);
+      filter: blur(0px);
+  }
+}
+
+@keyframes rotation {
+  0%, 100% {
+      transform: rotate(0deg);
+  }
+  50% {
+      transform: rotate(180deg);
+  }
+}
+
+@keyframes blink {
+  0% {
+      height: 0;
+  }
+  100% {
+      height: 12px;
+  }
+}
+
+.loader .love
+ {
+    /* Use CSS variables for colors */
+    background-color: var(--primary-color);
+}
+
+/* Adjust the colors of pseudo-elements */
+.loader .love::before,
+.loader .love::after,
+.loader .death::before,
+.loader .death::after,
+r {
+    background-color: var(--primary-color);
+}
+
+
+
+
+/* Light Mode Styles */
+@media (prefers-color-scheme: light) {
+  :root {
+      --background-color: #ffffff; /* Light mode background */
+      --text-color: #000000; /* Light mode text color */
+      /* ... other light mode variables ... */
+  }
+
+  .page-loader {
+      background: var(--background-color);
+  }
+
+  .loader .love,
+  .loader .death,
+  .loader .robots {
+      background-color: var(--primary-color);
+  }
+
+  .loader .love::before,
+  .loader .love::after,
+  .loader .death::before,
+  .loader .death::after,
+  .loader .robots::before,
+  .loader .robots::after {
+      background-color: var(--primary-color);
   }
 }
