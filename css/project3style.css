@@ -462,7 +462,7 @@ body.light-mode nav .nav-links li a.active::after {
 /* Responsive Design for Hero */
 @media (max-width: 900px) {
     .hero-title {
-        font-size: 80px;
+        font-size: 62px;
     }
     .hero-subtitle {
         font-size: 1.2em;
@@ -1474,21 +1474,21 @@ body.light-mode .text {
     justify-content: flex-start;
     justify-items: flex-start;
     animation: scroll-up 4s infinite ease-in-out;
-    animation-delay: 1s;
+    animation-delay: 2s;
 }
 
 .loader .loader-container:nth-child(2) {
     justify-content: flex-end;
     justify-items: flex-end;
     animation: scroll-down 4s infinite ease-in-out;
-    animation-delay: 1s;
+    animation-delay: 2s;
 }
 
 .loader .loader-container:nth-child(1) {
     justify-content: flex-end;
     justify-items: flex-end;
     animation: scroll-down 3s infinite ease-in-out;
-    animation-delay: 1s;
+    animation-delay: 2s;
 }
 
 .love {
