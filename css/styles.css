@@ -3041,3 +3041,9 @@ r {
       background-color: var(--primary-color);
   }
 }
+
+
+.view-all a{
+   text-decoration:  none;
+   font-weight: bolder;
+}
