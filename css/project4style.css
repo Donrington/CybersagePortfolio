@@ -586,7 +586,7 @@ body.light-mode nav .nav-links li a.active::after {
 /* Responsive Design for Hero */
 @media (max-width: 900px) {
     .hero-title {
-        font-size: 76px !important;
+        font-size: 73px !important;
     }
     .hero-subtitle {
         font-size: 1.0em !important;
