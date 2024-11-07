@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags and SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResuGlow | Project Review | CyberSage</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore ResuGlow, the resume builder application by CyberSage. Create, edit, and download professional resumes with ease using customizable templates.">
+    <meta name="keywords" content="ResuGlow, Resume Builder, Project Review, CyberSage, Web Application, Responsive Design, Professional Resumes">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="ResuGlow | Project Review | CyberSage">
+    <meta property="og:description" content="Discover ResuGlow by CyberSage. A web application that empowers users to create professional resumes using customizable templates.">
+    <meta property="og:image" content="images/resuglow-hero.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/resuglow-project.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ResuGlow | Project Review | CyberSage">
+    <meta name="twitter:description" content="Check out ResuGlow, the resume builder application by CyberSage. Create, customize, and download your professional resumes effortlessly.">
+    <meta name="twitter:image" content="images/resuglow-hero.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/circle2.png" type="image/png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;900&family=Lora:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- AOS Library CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/project4style.css">
+</head>
+
+<body>
+
+    <div class="page-loader">
+        <div class="loader">
+            <!-- Loader Content -->
+            <div class="loader-container">
+                <div class="carousel">
+                    <!-- Customize loader elements if needed -->
+                    <div class="loader-circle"></div>
+                    <div class="loader-circle"></div>
+                    <div class="loader-circle"></div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="bars"></div>
+    </div>
+    
+    <!-- Navigation Bar -->
+    <nav>
+        <h2><img src="circle2.png" alt="CyberSage Logo" class="logo-image fa fa-fade"> CyberSage</h2>
+        <!-- Burger Menu Trigger -->
+        <label class="burger" for="nav-toggle">
+            <input type="checkbox" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#details">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <!-- Add or adjust other links as needed -->
+        </ul>
+    </nav>
+
+    <!-- Theme Toggle Button -->
+    <div class="theme-toggle">
+        <label for="themeToggle" class="themeToggle st-sunMoonThemeToggleBtn">
+            <input type="checkbox" id="themeToggle" class="themeToggleInput" aria-label="Toggle light and dark mode" />
+
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              stroke="none"
+            >
+              <mask id="moon-mask">
+                <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                <circle cx="11" cy="3" r="8" fill="black"></circle>
+              </mask>
+              <circle
+                class="sunMoon"
+                cx="10"
+                cy="10"
+                r="8"
+                mask="url(#moon-mask)"
+              ></circle>
+              <g>
+                <circle class="sunRay sunRay1" cx="18" cy="10" r="1.5"></circle>
+                <circle class="sunRay sunRay2" cx="14" cy="16.928" r="1.5"></circle>
+                <circle class="sunRay sunRay3" cx="6" cy="16.928" r="1.5"></circle>
+                <circle class="sunRay sunRay4" cx="2" cy="10" r="1.5"></circle>
+                <circle class="sunRay sunRay5" cx="6" cy="3.1718" r="1.5"></circle>
+                <circle class="sunRay sunRay6" cx="14" cy="3.1718" r="1.5"></circle>
+              </g>
+            </svg>
+        </label>
+    </div>
+
+    <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+        <!-- Hero Logo -->
+        <img src="images/resuglow_logo.png" alt="ResuGlow Logo" class="hero-logo">
+        <!-- Hero Title with Glitch Effect -->
+        <h1 class="hero-title glitch" data-text="ResuGlow">ResuGlow</h1>
+        <!-- Hero Subtitle -->
+        <p class="hero-subtitle">Illuminate Your Professional Journey</p>
+        <!-- Call to Action Button -->
+        <a href="#details" class="cti">
+            <div class="CTI">Get Started</div>
+        </a>
+    </div>
+</section>
+
+
+    <!-- Project Details Section -->
+    <section class="project-details" id="details">
+        <div class="container">
+            <div class="card-container">
+                <!-- Existing Card -->
+                <div class="card" data-aos="fade-up">
+                    <div class="content">
+                        <p class="heading">Project Highlights</p>
+                        <p class="para">
+                            ResuGlow is an innovative resume builder application that empowers users to craft professional resumes effortlessly. With a selection of customizable templates and an intuitive interface, creating a standout resume has never been easier.
+                        </p>
+                        <p class="para">
+                            Whether you're kickstarting your career or aiming for the next big opportunity, ResuGlow provides the tools you need to shine in the job market.
+                        </p>
+
+                        <div class="project-features">
+                            <ul class="features-list">
+                                <li><i class="fas fa-check-circle"></i> User-Friendly Interface</li>
+                                <li><i class="fas fa-check-circle"></i> Customizable Templates</li>
+                                <li><i class="fas fa-check-circle"></i> Secure Login and Data Storage</li>
+                                <li><i class="fas fa-check-circle"></i> Export and Download Options</li>
+                                <li><i class="fas fa-check-circle"></i> Responsive Design</li>
+                            </ul>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://resuglow-cybersage.vercel.app/" target="_blank" class="cti">
+                                <div class="CTI">
+                                    Visit ResuGlow
+                                </div>
+                            </a>
+                            <a href="#gallery" class="cti">
+                                <div class="CTI">
+                                    View Gallery
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Card with Image -->
+                <div class="new-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="new-btn1"></div>
+                    <div class="new-btn2"></div>
+                    <div class="new-btn3"></div>
+                    <div class="new-btn4"></div>
+                    <div class="new-card-int">
+                        <!-- Image instead of text -->
+                        <img src="projects/resuglowmobile2.jpg" alt="ResuGlow Mobile View" class="new-card-image">
+                    </div>
+                    <div class="new-top">
+                        <div class="new-camera">
+                            <div class="new-int"></div>
+                        </div>
+                        <div class="new-speaker"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 data-aos="fade-up">Why Choose ResuGlow?</h2>
+            <div class="features-grid">
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Customizable Templates</h3>
+                    <p>Select from a range of professionally designed templates and personalize them to suit your style.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-lock"></i>
+                    </div>
+                    <h3>Secure Accounts</h3>
+                    <p>Your data is safe with us. Enjoy secure login and storage for your resume drafts.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <h3>Easy Export</h3>
+                    <p>Download your resume in multiple formats, ready to send to potential employers.</p>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Real-Time Editing</h3>
+                    <p>Make changes and see updates instantly. Streamline your resume-building process.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unique Addition: Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 data-aos="fade-up">What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                    <p>"ResuGlow made creating my resume so simple. The templates are modern and professional."</p>
+                    <h4>- Alex T.</h4>
+                </div>
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+                    <p>"I landed my dream job thanks to the standout resume I built with ResuGlow!"</p>
+                    <h4>- Maria S.</h4>
+                </div>
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+                    <p>"The real-time editing feature is a game-changer. I love how intuitive the interface is."</p>
+                    <h4>- James K.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="image-gallery" id="gallery">
+        <div class="gallery-background"></div>
+        <div class="container">
+            <div class="gallery-content">
+                <h2 class="gallery-title" data-aos="fade-up">ResuGlow in Action</h2>
+                <div class="gallery-grid">
+                    <!-- Gallery items with ResuGlow images -->
+                    <div class="gallery-item" data-aos="zoom-in">
+                        <img src="projects/resuglow1.jpg" alt="ResuGlow Template 1">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="projects/resuglow4.jpg" alt="ResuGlow Template 2">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="projects/resuglow10.jpg" alt="ResuGlow Editing Screen">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="projects/resuglow4.jpg" alt="ResuGlow">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="projects/resuglow5.jpg" alt="ResuGlow">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="projects/resuglow6.jpg" alt="ResuGlow">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="projects/resuglow7.jpg" alt="ResuGlow">
+                    </div>
+                    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="projects/resuglow9.jpg" alt="ResuGlow">
+                    </div>
+                    <!-- Add more images as needed -->
+                </div>
+                <div class="gallery-links cti" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://resuglow-cybersage.vercel.app/" target="_blank">
+                        <div class="CTI">
+                            Try ResuGlow Now
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox for Gallery -->
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="Enlarged Image">
+        <div class="caption" id="lightbox-caption"></div>
+    </div>
+   
+    <!-- Footer Section -->
+    <footer class="footer-section">
+        <div class="footer-container">
+            <!-- Footer Top -->
+            <div class="footer-top" data-aos="fade-up">
+                <div class="footer-logo">
+                    <img src="circle2.png" alt="CyberSage Logo" class="logo-image fa fa-fade">
+                    <h3>CyberSage</h3>
+                </div>
+                <p class="footer-description">
+                    Empowering professionals with innovative digital solutions. Let's build your future together.
+                </p>
+            </div>
+
+            <!-- Footer Middle -->
+            <div class="footer-middle" data-aos="fade-up" data-aos-delay="200">
+                <!-- Contact Information -->
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:contact@cybersage.com">contact@cybersage.com</a></p>
+                    <p>Phone: <a href="tel:+12345678901">+234 (702) 549-5506</a></p>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/carrington-abakwe-b0b0a0217" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/yourprofile" aria-label="X"><i class="fab fa-xing"></i></a>
+                        <a href="https://github.com/donrington" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://wa.me/2347025495506" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom" data-aos="fade-up" data-aos-delay="400">
+                <p>Designed by <img src="circle2.png" alt="CyberSage 2024" class="credits-image" class="fa fa-fade"> CyberSage © 2024</p>
+                <p>&copy; 2024 CyberSage. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="Btn" id="backToTopBtn" aria-label="Back to Top">
+        <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
+            <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
+        </svg>
+        <p class="text">Back to Top</p>
+    </button>
+
+    <!-- JavaScript Files -->
+    <!-- Include AOS JS, custom JS, and any other necessary scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/resuglow.js"></script>
+
+    <!-- Inline JavaScript for additional functionalities -->
+    <script>
+        // Initialize AOS
+        AOS.init();
+   // Combined JavaScript Code
+   document.addEventListener('DOMContentLoaded', function() {
+            // **Navigation Menu Functionality**
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.querySelector('nav .nav-links');
+
+            function toggleNav() {
+                if (navToggle.checked) {
+                    navLinks.classList.add('show-links');
+                } else {
+                    navLinks.classList.remove('show-links');
+                }
+            }
+
+            if (navToggle) {
+                navToggle.addEventListener('change', toggleNav);
+            } else {
+                console.error('Navigation toggle checkbox not found!');
+            }
+
+            // **Smooth Scrolling for Navigation Links**
+            document.querySelectorAll('nav .nav-links li a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    // If the link is an in-page link
+                    if (this.getAttribute('href').startsWith('#')) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
+
+                        // Close the navigation menu after clicking a link
+                        navLinks.classList.remove('show-links');
+                        navToggle.checked = false;
+                    }
+                });
+            });
+
+            // **Theme Toggle Functionality**
+            const themeToggle = document.getElementById('themeToggle');
+
+            if (!themeToggle) {
+                console.error('Theme toggle checkbox not found!');
+            } else {
+                /**
+                 * Function to set the theme.
+                 * @param {string} theme - 'light' or 'dark'
+                 */
+                function setTheme(theme) {
+                    if (theme === 'light') {
+                        document.body.classList.add('light-mode');
+                        themeToggle.checked = true;
+                    } else {
+                        document.body.classList.remove('light-mode');
+                        themeToggle.checked = false;
+                    }
+                }
+
+                /**
+                 * Function to determine the initial theme.
+                 * Checks localStorage for user preference.
+                 * If none, uses prefers-color-scheme media query.
+                 */
+                function determineTheme() {
+                    const userPreference = localStorage.getItem('theme');
+
+                    if (userPreference) {
+                        // Use user's saved preference
+                        setTheme(userPreference);
+                    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                        // Use system preference
+                        setTheme('light');
+                    } else {
+                        // Default to dark theme
+                        setTheme('dark');
+                    }
+                }
+
+                /**
+                 * Event listener for theme toggle switch.
+                 * Saves user preference to localStorage.
+                 */
+                themeToggle.addEventListener('change', () => {
+                    if (themeToggle.checked) {
+                        setTheme('light');
+                        localStorage.setItem('theme', 'light');
+                    } else {
+                        setTheme('dark');
+                        localStorage.setItem('theme', 'dark');
+                    }
+                });
+
+                // Initialize theme on page load
+                determineTheme();
+
+                // Listen for system theme changes
+                if (window.matchMedia) {
+                    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                        const newColorScheme = e.matches ? 'dark' : 'light';
+                        const userPreference = localStorage.getItem('theme');
+
+                        // Only change theme if user hasn't set a preference
+                        if (!userPreference) {
+                            setTheme(newColorScheme);
+                        }
+                    });
+                }
+            }
+
+            // **Back to Top Button Functionality**
+            const backToTopBtn = document.getElementById('backToTopBtn');
+
+            if (backToTopBtn) {
+                // Show or hide the button based on scroll position
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) { // Show after scrolling down 300px
+                        backToTopBtn.style.display = 'flex';
+                    } else {
+                        backToTopBtn.style.display = 'none';
+                    }
+                });
+
+                // Initial hide
+                backToTopBtn.style.display = 'none';
+
+                // Scroll to top smoothly on button click
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            } else {
+                console.error('Back to Top button not found!');
+            }
+
+            // **Section Active Link Highlighting**
+            const sections = document.querySelectorAll('section[id]');
+
+            // Add an event listener listening for scroll
+            window.addEventListener('scroll', () => {
+                let current = '';
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100; // Adjust this value based on header height
+                    if (window.pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                // Remove 'active' class from all nav links
+                document.querySelectorAll('nav .nav-links li a').forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+
+            // **Initialize AOS Library**
+            if (typeof AOS !== 'undefined') {
+                AOS.init();
+            } else {
+                console.error('AOS library is not loaded!');
+            }
+
+            // **Counter Animation**
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = counter.getAttribute('data-target');
+                if (target) {
+                    // Counter with numeric target
+                    counter.innerText = '0';
+                    const updateCounter = () => {
+                        const c = +counter.innerText;
+                        const targetNum = +target;
+                        const increment = targetNum / 200; // Adjust for speed
+                        if (c < targetNum) {
+                            counter.innerText = `${Math.ceil(c + increment)}`;
+                            setTimeout(updateCounter, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCounter();
+                } else {
+                    // Non-numeric counter (e.g., "24/7"), leave as is
+                }
+            });
+        });
+
+        // **Hide the Loader When the Page Has Fully Loaded**
+        window.addEventListener('load', function() {
+            const pageLoader = document.querySelector('.page-loader');
+            if (pageLoader) {
+                pageLoader.style.transition = 'opacity 0.5s ease-out';
+                pageLoader.style.opacity = '0';
+                // Wait for the transition to complete before removing
+                setTimeout(() => {
+                    pageLoader.style.display = 'none';
+                }, 2000); // Match the duration in the CSS transition
+            } else {
+                console.error('Page loader not found!');
+            }
+        });
+
+        // **Lightbox Functionality**
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const closeBtn = document.querySelector('.lightbox .close');
+
+            // Open Lightbox
+            document.querySelectorAll('.gallery-item img').forEach(img => {
+                img.addEventListener('click', () => {
+                    lightbox.style.display = 'flex';
+                    lightboxImg.src = img.src;
+                    lightboxCaption.innerText = img.alt;
+                });
+            });
+
+            // Close Lightbox
+            closeBtn.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+            });
+
+            // Close Lightbox when clicking outside the image
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    lightbox.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

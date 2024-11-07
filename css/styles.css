@@ -3046,4 +3046,9 @@ r {
 .view-all a{
    text-decoration:  none;
    font-weight: bolder;
+
+}
+
+.view-all{
+  margin-top: 40px;
 }
