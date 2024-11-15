@@ -707,7 +707,7 @@ section {
 
 .featured {
   grid-column: span 2;
-  height: 1200px; /* Ensure height is auto or appropriate */
+  height: auto; /* Ensure height is auto or appropriate */
 }
 
 .projects-grid {
@@ -3051,4 +3051,175 @@ r {
 
 .view-all{
   margin-top: 40px;
+}
+
+
+
+
+/* Pricing Section */
+.pricing-section {
+  padding: 80px 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.pricing-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.pricing-section .section-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+  color: var(--secondary-color);
+}
+
+.pricing-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pricing-card {
+  background: var(--card-background);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  position: relative;
+  transition: transform 0.3s;
+  border: 1px solid var(--divider-color);
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+}
+
+.pricing-card.popular {
+  border: 2px solid var(--primary-color);
+}
+
+.most-popular-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.pricing-header {
+  background: var(--nav-background);
+  color: var(--text-color);
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.plan-title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.plan-duration {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--secondary-color);
+}
+
+.plan-features {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.plan-features li {
+  font-size: 1rem;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.plan-features li i {
+  margin-right: 10px;
+  color: var(--primary-color);
+}
+
+.plan-features li i.fa-times-circle {
+  color: var(--divider-color);
+}
+
+.plan-button {
+  display: block;
+  text-align: center;
+  background: var(--primary-color);
+  color: var(--btn-text-color-dark);
+  padding: 15px;
+  margin: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.plan-button:hover {
+  background: #fff;
+  color: #d10303;
+
+}
+
+body.light-mode .plan-button:hover{
+  background-color: #000;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .pricing-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .pricing-card {
+      width: 100%;
+      max-width: 400px;
+  }
+}
+
+
+/* Center the View More Button */
+.view-all2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.view-more-button2 {
+  padding: 12px 30px;
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1em;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.view-more-button2:hover {
+  background-color: #fff;
+  transform: translateY(-3px);
+  color: #d10303;
+}
+
+.view-more-button2:active {
+  transform: translateY(1px);
 }
