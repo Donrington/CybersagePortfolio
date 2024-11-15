@@ -3198,7 +3198,7 @@ body.light-mode .plan-button:hover{
       align-items: center;
   }
   .pricing-card {
-      width: 100%;
+      width: 80%;
       max-width: 400px;
   }
 }
