@@ -939,6 +939,8 @@ section {
   .trusted-subtitle {
       font-size: 1.2em;
   }
+
+
   .logo-item {
     width: 100px;
     height: 100px;
@@ -1858,13 +1860,18 @@ section {
   }
 
   .word{
-    font-size: 29vw;
+    font-size: 6em;
   }
+
+  .word-2{
+    font-size: 38vw;
+  }
+ 
   .hero-title{
-    font-size: 4px !important;
+    font-size: 8px !important;
   }
   .hero-subtitle{
-    font-size: 4px !important;
+    font-size: 6px !important;
   }
 
 .light-mode nav .nav-links li a {
