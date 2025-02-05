@@ -187,7 +187,7 @@
 <!-- Hero Section -->
 <!-- Hero Section -->
 <section class="hero-section" id="home">
-    <div class="parallax parallax-1"></div> <!-- Parallax Decorative Element -->
+    <div class="parallax parrallax2 parallax-1"></div> <!-- Parallax Decorative Element -->
     <div class="parallax parallax-2"></div> <!-- Another Parallax Decorative Element -->
 
     <div class="hero-content">
@@ -1142,12 +1142,99 @@
 
 
     // GSAP Animation for Hero Words
-    gsap.fromTo('.word-1', { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 1.5, ease: 'power2.out' });
-    gsap.fromTo('.word-2', { opacity: 0, y: 100 }, { opacity: 1, y: 0, duration: 1.5, delay: 0.5, ease: 'power2.out' });
-    gsap.fromTo('.word-3', { opacity: 0, x: 100 }, { opacity: 1, x: 0, duration: 1.5, delay: 1, ease: 'power2.out' });
+  // Modify your GSAP animations with ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
+// Animate word-1 with horizontal movement and rotation
+gsap.to(".word-1", {
+  x: "-20vw",
+  rotate: -5,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1,
+    invalidateOnRefresh: true
+  }
+});
 
-    gsap.registerPlugin(ScrollTrigger);
+// Animate word-2 with vertical movement and scale
+gsap.to(".word-2", {
+  y: "10vh",
+  scale: 0.95,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1,
+    invalidateOnRefresh: true
+  }
+});
+
+// Animate word-3 with horizontal movement and rotation
+gsap.to(".word-3", {
+  x: "20vw",
+  rotate: 5,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1,
+    invalidateOnRefresh: true
+  }
+});
+
+// Add parallax effect to decorative elements
+gsap.to(".parallax-1", {
+  y: "-50%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1
+  }
+});
+
+gsap.to(".parallax-2", {
+  y: "50%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1
+  }
+});
+
+// Add smooth blur effect on scroll
+gsap.to(".word", {
+  filter: "blur(5px)",
+  opacity: 0.6,
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "center center",
+    end: "bottom bottom",
+    scrub: 1,
+    invalidateOnRefresh: true
+  }
+});
+
+// Keep center text fixed
+gsap.to(".hero-text", {
+  y: "50vh",
+  ease: "power3.out",
+  scrollTrigger: {
+    trigger: ".hero-section",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: 1
+  }
+});
 
 gsap.fromTo('.introduction-content', 
     { opacity: 0, y: 50 }, // Initial state: Hidden and moved down

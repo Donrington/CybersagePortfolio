@@ -28,6 +28,8 @@
   --btn-bg-dark: var(--btn-gradient-dark);
   --btn-text-color-light: #ffffff;
   --btn-text-color-dark: #ffffff;
+  --depth-factor: 0.2;
+  --movement-intensity: 1.5;
 }
 
 /* Light Mode Overrides */
@@ -465,6 +467,8 @@ section {
   justify-content: center;
   overflow: hidden;
   z-index: 1;
+  perspective: 2500px;
+  transform-style: preserve-3d;
 }
 
 .hero-content {
@@ -479,6 +483,7 @@ section {
   padding: 40px;
   z-index: 2;
   overflow-x: hidden;
+  perspective: 1000px;
 }
 
 /* Hover Effect for Each Letter */
@@ -486,6 +491,9 @@ section {
   display: inline-block;
   transition: color 0.3s ease;
   pointer-events: auto;
+  position: relative;
+  display: inline-block;
+  transform-origin: center center;
 }
 
 .word {
@@ -498,6 +506,8 @@ section {
   white-space: nowrap;
   pointer-events: none;
   margin: 20px 0;
+  transform-style: preserve-3d;
+  will-change: transform, filter, opacity;
 }
 
 .word-1 {
@@ -527,12 +537,20 @@ section {
   text-align: center;
   color: #fafafa;
   pointer-events: auto;
+  mix-blend-mode: difference;
+  z-index: 300;
+  text-shadow: 0 0 30px rgba(255,255,255,0.3);
+
+  padding: 2rem;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.4);
 }
 
 .hero-title {
   font-size: 1vw;
   font-weight: 700;
   text-transform: uppercase;
+  
 }
 
 .hero-subtitle {
@@ -612,7 +630,42 @@ section {
   color: #d10303;
   transform: translateY(-5px);
 }
+.parallax2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, 
+    rgba(255,255,255,0.15) 0%,
+    rgba(0,0,0,0.25) 100%);
+  z-index: 1;
+  opacity: 0.3;
+  backdrop-filter: blur(2px);
+  mix-blend-mode: overlay;
+}
 
+.matrix-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.grid-cell {
+  border-right: 1px solid rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  transition: all 0.5s ease-out;
+}
+
+.float-element {
+  position: absolute;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  filter: blur(30px);
+  z-index: 0;
+}
 /* Parallax Decorative Elements */
 .parallax {
   position: absolute;
