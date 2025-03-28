@@ -921,7 +921,7 @@ section {
   display: flex;
   align-items: center;
   gap: 150px;
-  animation: scroll 30s linear infinite;
+  animation: scroll 40s linear infinite;
   margin-top: 50px;
   margin-bottom: 50px;
 }
