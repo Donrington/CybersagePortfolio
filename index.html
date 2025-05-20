@@ -1333,21 +1333,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
     
-    // Adjust tilt settings for mobile
-    function adjustTiltForMobile() {
-        if (window.innerWidth <= 768 && typeof VanillaTilt !== 'undefined') {
-            VanillaTilt.init(tiltElements, {
-                max: 5, // Reduce tilt effect on mobile
-                speed: 200,
-                glare: false,
-                scale: 1.01
-            });
-        }
-    }
-    
-    // Run on load and resize
-    adjustTiltForMobile();
-    window.addEventListener('resize', adjustTiltForMobile);
+
+    // Select elements to apply tilt effect
+    const tiltElements = document.querySelectorAll('.tilt'); // or whatever class you use for tilt
+
+    // Adjust tilt settings for mobile
+    function adjustTiltForMobile() {
+        if (window.innerWidth <= 768 && typeof VanillaTilt !== 'undefined') {
+            VanillaTilt.init(tiltElements, {
+                max: 5, // Reduce tilt effect on mobile
+                speed: 200,
+                glare: false,
+                scale: 1.01
+            });
+        }
+    }
+
+    // Run on load and resize
+    adjustTiltForMobile();
+    window.addEventListener('resize', adjustTiltForMobile);
+
     
     // "View All Projects" button functionality with smooth animation
     const viewAllBtn = document.getElementById('viewAllProjectsBtn');
