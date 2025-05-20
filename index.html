@@ -36,7 +36,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
         <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;800;900&family=Montserrat:wght@400;500;600;800;900&display=swap" rel="stylesheet">
     
         <!-- Font Awesome CDN -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -120,33 +120,34 @@
     
 
     
-        <!-- Navigation Bar -->
-        <!-- ... rest of your HTML content ... -->
-    
-   <!-- Menu Trigger -->
-   <div class="container">
-    <div class="bars"></div>
-</div>
+  
+
 
 <!-- Navigation Bar -->
-<nav>
-    <h2> <img src="circle2.png" alt="CyberSage Logo" class="logo-image fa fa-fade"> CyberSage</h2>
-    <!-- Burger Menu Trigger -->
-    <label class="burger" for="nav-toggle">
-        <input type="checkbox" id="nav-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <nav id="navbar">
+        <h2>
+            <img src="circle2.png" alt="CyberSage Logo" class="logo-image fa fa-fade">
+            CyberSage
+        </h2>
+        
+        <!-- Burger Menu Trigger -->
+        <label class="burger" for="nav-toggle">
+            <input type="checkbox" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
 
 <!-- Theme Toggle Button -->
@@ -186,39 +187,99 @@
 
 <!-- Hero Section -->
 <!-- Hero Section -->
-<section class="hero-section" id="home">
-    <div class="parallax parrallax2 parallax-1"></div> <!-- Parallax Decorative Element -->
-    <div class="parallax parallax-2"></div> <!-- Another Parallax Decorative Element -->
+<!-- Status Badge -->
+    <div class="status-badge">
+        Available for Projects
+    </div>
 
-    <div class="hero-content">
-        <div class="word word-1 split-text">
-            <span>F</span><span>O</span><span>L</span><span>I</span><span>O</span>
-        </div>
-        <div class="word word-2 split-text">
-            <span>A</span><span class="space-holder"></span><span>C</span>
-            <div class="hero-text">
-                <h5 class="hero-title">ABAKWE <br> CARRINGTON</h5>
-                <p class="hero-subtitle">WEB DEVELOPER <br> FREELANCER</p>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <!-- Animated Background -->
+        <div class="cyber-grid"></div>
+        
+        <!-- Floating Particles -->
+        <div class="particle" style="top: 20%; left: 10%; width: 4px; height: 4px;"></div>
+        <div class="particle" style="top: 60%; left: 80%; width: 6px; height: 6px;"></div>
+        <div class="particle" style="top: 80%; left: 20%; width: 3px; height: 3px;"></div>
+        <div class="particle" style="top: 30%; left: 70%; width: 5px; height: 5px;"></div>
+        <div class="particle" style="top: 90%; left: 60%; width: 4px; height: 4px;"></div>
+        
+        <!-- Enhanced Parallax Elements -->
+        <div class="parallax parallax-1"></div>
+        <div class="parallax parallax-2"></div>
+        <div class="parallax parallax-3"></div>
+        
+        <div class="hero-content">
+            <div class="word word-1 split-text">
+                <span>F</span><span>O</span><span>L</span><span>I</span><span>O</span>
+            </div>
+            <div class="word word-2 split-text">
+          
+                <div class="hero-text">
+                    <h1 class="hero-title">ABAKWE<br>CARRINGTON</h1>
+                    <p class="hero-subtitle">WEB DEVELOPER<br>FREELANCER</p>
+                    <div class="hero-cta">
+                        <div class="scroll-indicator">
+                            <span class="scroll-text">Explore</span>
+                            <div class="scroll-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="word word-3 word-3-z split-text">
+                <span>2</span><span>0</span><span>2</span><span>5</span>
             </div>
         </div>
-        <div class="word word-3 word-3-z split-text">
-            <span>2</span><span>0</span><span>2</span><span>4</span>
+    </section>
+
+    <!-- Introduction Section -->
+<section class="introduction-section" id="about">
+    <!-- Parallax Decorative Elements -->
+    <div class="parallax parallax-1" data-aos="fade-up" data-aos-delay="200"></div>
+    <div class="parallax parallax-2" data-aos="fade-up" data-aos-delay="400"></div>
+    <div class="parallax parallax-3" data-aos="fade-up" data-aos-delay="600"></div>
+    
+    <div class="introduction-content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="divider"></div>
+        
+        <h2 class="split-text enhanced-title">
+            <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span> 
+            <span>M</span><span>e</span>
+        </h2>
+        
+        <p class="intro-text">
+            Hello, I am <span class="intro-highlight">Abakwe Carrington</span>, a passionate Full Stack Software Developer 
+            specializing in building beautiful, functional, and cutting-edge web applications. Where innovation meets precision, 
+            I architect digital solutions that push boundaries and redefine user experiences through cutting-edge technology 
+            and creative vision.
+        </p>
+        
+        <div class="enhanced-text">
+            <p>
+                My focus is on utilizing <span class="intro-highlight">Python frameworks</span> like Flask and Django 
+                for seamless backend development, while delivering stunning front-end interfaces with modern frameworks 
+                and technologies. With a deep love for problem-solving, I turn challenges into robust solutions, 
+                crafting responsive and highly interactive user experiences that solve real-world problems and elevate 
+                digital landscapes.
+            </p>
         </div>
+        
+ 
+        <div class="divider"></div>
     </div>
 </section>
 
 
-
-<!-- Introduction Section -->
-<section class="introduction-section" id="about">
-    <div class="parallax parallax-1" data-aos="fade-up" data-aos-delay="200"></div> <!-- Parallax Decorative Element -->
-    <div class="parallax parallax-2" data-aos="fade-up" data-aos-delay="400"></div> <!-- Another Parallax Decorative Element -->
-    <div class="parallax parallax-3" data-aos="fade-up" data-aos-delay="600"></div> <!-- Additional Decorative Element -->
+<!-- <section class="introduction-section" id="about">
+    <div class="parallax parallax-1" data-aos="fade-up" data-aos-delay="200"></div>
+    <div class="parallax parallax-2" data-aos="fade-up" data-aos-delay="400"></div>
+    
+    <div class="parallax parallax-3" data-aos="fade-up" data-aos-delay="600"></div>
 
     <div class="introduction-content" data-aos="fade-up" data-aos-duration="1000">
-        <div class="divider"></div> <!-- New Decorative Divider -->
+        <div class="divider"></div>
         <h2 class="split-text enhanced-title">
-            <!-- Wrapping each letter with a span for hover effect -->
+           
             <span>A</span><span>b</span><span>o</span><span>u</span><span>t</span> <span>M</span><span>e</span>
         </h2>
         <p class="intro-text enhanced-text">
@@ -226,58 +287,84 @@
             My focus is on utilizing Python frameworks like Flask and Django for seamless backend development, while delivering stunning front-end interfaces with modern frameworks and technologies.
             With a deep love for problem-solving, I turn challenges into robust solutions, crafting responsive and highly interactive user experiences that solve real-world problems and elevate digital landscapes.
         </p>
-        <div class="divider"></div> <!-- Bottom Divider -->
+        <div class="divider"></div> 
     </div>
-</section>
+</section> -->
 
 <!-- Work History Timeline Section -->
 <section class="history-section" id="history">
-    <h2 class="section-title2" data-aos="fade-up">WORK HISTORY</h2>
+    <div class="particles-container" id="particles-js"></div>
     <div class="container">
         <h2 class="section-title" data-aos="fade-up">WORK HISTORY</h2>
+        <h2 class="section-title2" data-aos="fade-up">WORK HISTORY</h2>
+        
         <div class="timeline">
             <!-- Timeline Item 1 -->
-
             <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-icon">
+                    <i class="fas fa-camera"></i>
+                </div>
+                <div class="timeline-content">
+                    <h3>NextGen Robotics</h3>
+                    <span class="timeline-date">April 2025 - Present</span>
+                    <p>Software Engineer for NextGen Robotics</p>
+                    <div class="timeline-details">
+                        <span class="timeline-tag">Software Development</span>
+                        <span class="timeline-tag">Robotics</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                 <div class="timeline-icon">
                     <i class="fas fa-trophy"></i>
                 </div>
-
-                    <div class="timeline-content">
-                        <h3>Twerk Queen Lagos</h3>
-                        <span class="timeline-date">Feburary 2025 - Present</span>
-                        <p>Design,, Developed and deployed a fully responsive event based web platform for Twer Queen Lagos.</p>
+                <div class="timeline-content">
+                    <h3>Twerk Queen Lagos</h3>
+                    <span class="timeline-date">February 2025 - Present</span>
+                    <p>Designed, developed and deployed a fully responsive event-based web platform for Twerk Queen Lagos.</p>
+                    <div class="timeline-details">
+                        <span class="timeline-tag">Web Development</span>
+                        <span class="timeline-tag">UI/UX</span>
                     </div>
+                </div>
             </div>
-            <div class="timeline-item" data-aos="fade-up">
+            
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                 <div class="timeline-icon">
                     <i class="fas fa-briefcase"></i>
                 </div>
-
                 <div class="timeline-content">
                     <h3>Axflo Oil & Gas Nig Ltd</h3>
                     <span class="timeline-date">December 2024 - Present</span>
                     <p>Built and maintained the company portfolio website, improving online presence and client engagement</p>
+                    <div class="timeline-details">
+                        <span class="timeline-tag">Portfolio</span>
+                        <span class="timeline-tag">SEO</span>
+                    </div>
                 </div>
             </div>
-
       
-            <div class="timeline-item" data-aos="fade-up">
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="timeline-icon">
                     <i class="fas fa-store-alt"></i>
                 </div>
-
-          
-
-
                 <div class="timeline-content">
                     <h3>Rokeyla Store</h3>
                     <span class="timeline-date">January 2024 - Present</span>
                     <p>Developed a robust e-commerce platform, enhancing user experience and increasing sales by 40%.</p>
+                    <div class="timeline-details">
+                        <span class="timeline-tag">E-commerce</span>
+                        <span class="timeline-tag">UX Design</span>
+                    </div>
                 </div>
             </div>
-            <!-- Timeline Item 2 -->
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
                 <div class="timeline-icon">
                     <i class="fas fa-briefcase"></i>
                 </div>
@@ -285,10 +372,15 @@
                     <h3>Samdus Oil & Gas</h3>
                     <span class="timeline-date">March 2024 - Present</span>
                     <p>Built and maintained the company portfolio website, improving online presence and client engagement.</p>
+                    <div class="timeline-details">
+                        <span class="timeline-tag">Portfolio</span>
+                        <span class="timeline-tag">Web Design</span>
+                    </div>
                 </div>
             </div>
-            <!-- Timeline Item 3 -->
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            
+            <!-- Timeline Item 6 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
                 <div class="timeline-icon">
                     <i class="fas fa-hammer"></i>
                 </div>
@@ -296,10 +388,15 @@
                     <h3>All-A Handyman & Contractor</h3>
                     <span class="timeline-date">June 2024 - Present</span>
                     <p>Designed and implemented a responsive website, streamlining project management and client communications.</p>
+                    <div class="timeline-details">
+                        <span class="timeline-tag">Responsive Design</span>
+                        <span class="timeline-tag">Client Management</span>
+                    </div>
                 </div>
             </div>
-            <!-- Timeline Item 4 -->
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            
+            <!-- Timeline Item 7 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
                 <div class="timeline-icon">
                     <i class="fas fa-code"></i>
                 </div>
@@ -307,27 +404,40 @@
                     <h3>Zidio Development</h3>
                     <span class="timeline-date">August 2024 - Present</span>
                     <p>Developed multiple applications and a website for intern applications with bulk SMS functionality, enhancing recruitment processes.</p>
+                    <div class="timeline-details">
+                        <span class="timeline-tag">Applications</span>
+                        <span class="timeline-tag">SMS Integration</span>
+                    </div>
                 </div>
             </div>
-            <!-- Timeline Item 5 -->
-            <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            
+            <!-- Timeline Item 8 -->
+            <div class="timeline-item" data-aos="fade-up" data-aos-delay="700">
                 <div class="timeline-icon">
                     <i class="fas fa-plane"></i>
                 </div>
                 <div class="timeline-content">
                     <h3>Amanigo Travels</h3>
-                    <span class="timeline-date">May 2024 - june 2024</span>
+                    <span class="timeline-date">May 2024 - June 2024</span>
                     <p>Led the development of a comprehensive travel management web application, boosting user engagement and administrative efficiency.</p>
+                    <div class="timeline-details">
+                        <span class="timeline-tag">Web Application</span>
+                        <span class="timeline-tag">Travel Industry</span>
+                    </div>
                 </div>
             </div>
-            <!-- Add more timeline items as needed -->
-
-           
         </div>
         
+        <div class="timeline-progress" aria-hidden="true">
+            <div class="timeline-progress-bar"></div>
+        </div>
     </div>
-    <div class="view-all" data-aos="fade-up" data-aos-delay="1400">
-        <a href="resume/ABAKWECARRINGTONCV.pdf" target="_blank" class="view-all-button">Download CV</a>
+    
+    <div class="view-all" data-aos="fade-up">
+        <a href="resume/Abakwe Carrington CV-Remote.pdf" target="_blank" class="view-all-button">
+            <span>Download CV</span>
+            <i class="fas fa-download"></i>
+        </a>
     </div>
 </section>
 
@@ -335,18 +445,17 @@
 
 
 
-
-
-<!-- Projects Section -->
+<!-- Enhanced Projects Section - 2025 Edition -->
 <section class="projects-section" id="projects">
+    <div class="projects-bg-elements"></div>
     <h2 class="projects-title" data-aos="fade-up">PROJECTS</h2>
 
     <!-- Projects Container -->
     <div class="projects-container">
         <!-- Featured Project -->
-        <div class="project-item featured" data-aos="fade-up">
+        <div class="project-item featured js-tilt" data-aos="fade-up" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
             <div class="project-image-wrapper">
-                  <a href="project1.html">
+                <a href="project1.html">
                     <img src="projects/rokey3_17.jpg" alt="Featured Project" class="project-image" loading="lazy">
                     <div class="overlay">
                         <div class="project-info">
@@ -362,10 +471,10 @@
 
         <!-- Projects Grid -->
         <div class="projects-grid">
-            <!-- Row for Projects 1 and 2 -->
+            <!-- Row 1 -->
             <div class="project-row">
                 <!-- Project 1 -->
-                <div class="project-item size-small" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
                     <div class="project-image-wrapper">
                         <a href="project2.html">
                             <img src="projects/samdus1_1.jpg" alt="Project 1" class="project-image" loading="lazy">
@@ -373,15 +482,16 @@
                                 <div class="project-info">
                                     <i class="project-icon fas fa-paint-brush"></i>
                                     <h3 class="project-title">Samdus Oil and Gas Limited</h3>
-                                    <p class="project-categories">Web App, Company Portfolio </p>
+                                    <p class="project-categories">Web App, Company Portfolio</p>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <p class="project-quote"><em>"Innovation in Services."</em></p>
                 </div>
+                
                 <!-- Project 2 -->
-                <div class="project-item size-medium" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
                     <div class="project-image-wrapper">
                         <a href="project3.html">
                             <img src="projects/handyman3.jpg" alt="Project 2" class="project-image" loading="lazy">
@@ -394,37 +504,34 @@
                             </div>
                         </a>
                     </div>
-                    <p class="project-quote"><em>"Building Your Vision
-                        Recreating Your Imagination."</em></p>
+                    <p class="project-quote"><em>"Building Your Vision, Recreating Your Imagination."</em></p>
                 </div>
-
-                       <!-- Project 3 - Standalone -->
-            <div class="project-item size-large standalone-left" data-aos="fade-up" data-aos-delay="600">
-                <div class="project-image-wrapper">
-                    <a href="https://krk-motors.vercel.app/">
-                        <img src="projects/krkmotors.png" alt="Project 3" class="project-image" loading="lazy">
-                        <div class="overlay">
-                            <div class="project-info">
-                                <i class="project-icon fas fa-car"></i>
-                                <h3 class="project-title">KRK Motors</h3>
-                                <p class="project-categories">Web App, Company Portfolio</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <p class="project-quote"><em>"Delivering Your Dream Car."</em></p>
-            </div>
             </div>
 
-     
-
-            <!-- Row for Projects 4 and 5 -->
+            <!-- Row 2 -->
             <div class="project-row">
-
-                <div class="project-item size-large standalone-left" data-aos="fade-up" data-aos-delay="600">
+                <!-- Project 3 -->
+                <div class="project-item size-large js-tilt" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+                    <div class="project-image-wrapper">
+                        <a href="https://krk-motors.vercel.app/">
+                            <img src="projects/krkmotors.png" alt="Project 3" class="project-image" loading="lazy">
+                            <div class="overlay">
+                                <div class="project-info">
+                                    <i class="project-icon fas fa-car"></i>
+                                    <h3 class="project-title">KRK Motors</h3>
+                                    <p class="project-categories">Web App, Company Portfolio</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="project-quote"><em>"Delivering Your Dream Car."</em></p>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-item size-small js-tilt" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                     <div class="project-image-wrapper">
                         <a href="https://axflo-cybersage.vercel.app/">
-                            <img src="axflo.png" alt="Project 3" class="project-image" loading="lazy">
+                            <img src="axflo.png" alt="Project 4" class="project-image" loading="lazy">
                             <div class="overlay">
                                 <div class="project-info">
                                     <i class="project-icon fas fa-shopping-cart"></i>
@@ -434,20 +541,20 @@
                             </div>
                         </a>
                     </div>
-                    <p class="project-quote"><em>"Maximum Energy Minimum Emissions."</em></p>
+                    <p class="project-quote"><em>"Maximum Energy, Minimum Emissions."</em></p>
                 </div>
+            </div>
 
-        
-               
-              
+            <!-- Row 3 -->
+            <div class="project-row">
                 <!-- Project 5 -->
-                <div class="project-item size-medium" data-aos="fade-up" data-aos-delay="1000">
+                <div class="project-item size-small js-tilt" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                     <div class="project-image-wrapper">
                         <a href="https://twerkqueenlagos.com/">
                             <img src="projects/twerkqueenlagos.jpg" alt="Project 5" class="project-image" loading="lazy">
                             <div class="overlay">
                                 <div class="project-info">
-                                    <i class="project-icon fas fa-chart-line"></i>
+                                    <i class="project-icon fas fa-music"></i>
                                     <h3 class="project-title">The Ultimate Dance Showdown</h3>
                                     <p class="project-categories">Web App, Event Website</p>
                                 </div>
@@ -456,40 +563,39 @@
                     </div>
                     <p class="project-quote"><em>"Experience the Heartbeat of Afrobeat in Lagos."</em></p>
                 </div>
-
-                       <!-- Project 6 - Standalone -->
-            <div class="project-item size-large standalone-left" data-aos="fade-up" data-aos-delay="1200">
-                <div class="project-image-wrapper">
-                    <a href="project4.html">
-                        <img src="projects/resuglow1.jpg" alt="Project 6" class="project-image" loading="lazy">
-                        <div class="overlay">
-                            <div class="project-info">
-                                <i class="project-icon fas fa-mobile-alt"></i>
-                                <h3 class="project-title">ResuGlow</h3>
-                                <p class="project-categories">Web App, Utility</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <p class="project-quote"><em>'Build Your Professional Resume.'</em></p>
-            </div> 
-            </div>
-
-
-     
-        
-
-
-            <div class="hidden-projects project-grid" style="display: none;">
                 
+                <!-- Project 6 -->
+                <div class="project-item size-large js-tilt" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
+                    <div class="project-image-wrapper">
+                        <a href="https://seashell-app-2-c3syp.ondigitalocean.app/">
+                            <img src="projects/nextgen.png" alt="NextGenRobotics" class="project-image" loading="lazy">
+                            <div class="overlay">
+                                <div class="project-info">
+                                    <i class="project-icon fas fa-robot"></i>
+                                    <h3 class="project-title">NextGenRobotics</h3>
+                                    <p class="project-categories">AI & Drone Solutions</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="project-quote"><em>"Empowering Industries with 360° Intelligence."</em></p>
+                </div>
+            </div>
+</div>
+
+
+            <!-- Hidden Projects Grid (Initially Hidden) -->
+            <div class="hidden-projects" id="hiddenProjects">
+                <!-- Row 4 --> <div class="hidden-projects-grid">
+                <div class="project-row">
                     <!-- Project 7 -->
-                    <div class="project-item size-medium" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
                         <div class="project-image-wrapper">
                             <a href="https://lagosafrobeat.onrender.com/">
                                 <img src="projects/con1.png" alt="Project 7" class="project-image" loading="lazy">
                                 <div class="overlay">
                                     <div class="project-info">
-                                        <i class="project-icon fas fa-chart-line"></i>
+                                        <i class="project-icon fas fa-music"></i>
                                         <h3 class="project-title">Lagos AfroBeat Concert</h3>
                                         <p class="project-categories">Web App, Event Website</p>
                                     </div>
@@ -498,9 +604,9 @@
                         </div>
                         <p class="project-quote"><em>"Experience the Heartbeat of Afrobeat in Lagos."</em></p>
                     </div>
-            
+                    
                     <!-- Project 8 -->
-                    <div class="project-item size-large standalone-left" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
                         <div class="project-image-wrapper">
                             <a href="https://github.com/Donrington/techhub">
                                 <img src="projects/T1.png" alt="Project 8" class="project-image" loading="lazy">
@@ -515,9 +621,12 @@
                         </div>
                         <p class="project-quote"><em>"Efficiently Manage Your Inventory."</em></p>
                     </div>
-            
+                </div>
+                
+                <!-- Row 5 -->
+                <div class="project-row">
                     <!-- Project 9 -->
-                    <div class="project-item size-medium" data-aos="fade-up" data-aos-delay="800">
+                    <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.1">
                         <div class="project-image-wrapper">
                             <a href="https://github.com/Donrington/HeartfulConnect">
                                 <img src="projects/HC2.png" alt="Project 9" class="project-image" loading="lazy">
@@ -532,15 +641,15 @@
                         </div>
                         <p class="project-quote"><em>"Where Healing and Hope Begin"</em></p>
                     </div>
-            
+                    
                     <!-- Project 10 -->
-                    <div class="project-item size-small" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                         <div class="project-image-wrapper">
                             <a href="https://github.com/Donrington/locationtracker">
                                 <img src="projects/gps.png" alt="Project 10" class="project-image" loading="lazy">
                                 <div class="overlay">
                                     <div class="project-info">
-                                        <i class="project-icon fas fa-chart-pie"></i>
+                                        <i class="project-icon fas fa-map-marker-alt"></i>
                                         <h3 class="project-title">GPS</h3>
                                         <p class="project-categories">Web App, Location Tracker</p>
                                     </div>
@@ -549,32 +658,35 @@
                         </div>
                         <p class="project-quote"><em>"Guide You Every Step of The Way"</em></p>
                     </div>
-            
+                </div>
+                
+                <!-- Row 6 -->
+                <div class="project-row">
                     <!-- Project 11 -->
-                    <div class="project-item size-large standalone-left" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
                         <div class="project-image-wrapper">
                             <a href="https://github.com/Donrington/locationtracker">
                                 <img src="projects/expensetrack1.png" alt="Project 11" class="project-image" loading="lazy">
                                 <div class="overlay">
                                     <div class="project-info">
                                         <i class="project-icon fas fa-chart-pie"></i>
-                                        <h3 class="project-title">Navigation</h3>
-                                        <p class="project-categories">Web App</p>
+                                        <h3 class="project-title">Expense Tracker</h3>
+                                        <p class="project-categories">Web App, Finance</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <p class="project-quote"><em>"Take Control Of Your Finances With Ease."</em></p>
                     </div>
-            
+                    
                     <!-- Project 12 -->
-                    <div class="project-item size-small" data-aos="fade-up" data-aos-delay="800">
+                    <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
                         <div class="project-image-wrapper">
                             <a href="https://handyman-construction.vercel.app/">
                                 <img src="projects/skylineconstruct.png" alt="Project 12" class="project-image" loading="lazy">
                                 <div class="overlay">
                                     <div class="project-info">
-                                        <i class="project-icon fas fa-magic"></i>
+                                        <i class="project-icon fas fa-building"></i>
                                         <h3 class="project-title">Skyline Construction</h3>
                                         <p class="project-categories">Landing Page, Company Portfolio</p>
                                     </div>
@@ -583,36 +695,55 @@
                         </div>
                         <p class="project-quote"><em>"Transforming Spaces into Stunning Environments."</em></p>
                     </div>
-            
+                </div>
+                
+                <!-- Row 7 -->
+                <div class="project-row">
                     <!-- Project 13 -->
-                    <div class="project-item size-medium" data-aos="fade-up" data-aos-delay="1200">
+                    <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
                         <div class="project-image-wrapper">
                             <a href="https://book-store-j9u7.vercel.app">
                                 <img src="projects/ebook.png" alt="Project 13" class="project-image" loading="lazy">
                                 <div class="overlay">
                                     <div class="project-info">
-                                        <i class="project-icon fas fa-gamepad"></i>
+                                        <i class="project-icon fas fa-book"></i>
                                         <h3 class="project-title">E-Book Store</h3>
-                                        <p class="project-categories">Web App, Landing Page</p>
+                                        <p class="project-categories">Web App, E-Commerce</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <p class="project-quote"><em>"Explore Our Library of Adventures."</em></p>
                     </div>
-               
-                            
+                    
+                    <!-- Project 14 -->
+                    <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+                        <div class="project-image-wrapper">
+                            <a href="https://book-store-j9u7.vercel.app">
+                                <img src="projects/resuglow1.jpg" alt="Project 14" class="project-image" loading="lazy">
+                                <div class="overlay">
+                                    <div class="project-info">
+                                        <i class="project-icon fas fa-file-alt"></i>
+                                        <h3 class="project-title">ResuGlow</h3>
+                                        <p class="project-categories">Web App, Utility</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <p class="project-quote"><em>"Build Your Professional Resume."</em></p>
+                    </div>
+                </div>
             </div>
         </div>
-        
 
         <!-- View All Projects Button -->
-        <div class="view-all" data-aos="fade-up" data-aos-delay="1400">
-            <button class="view-all-button" id="viewAllProjectsBtn">View All Projects</button>
+        <div class="view-all" data-aos="fade-up" data-aos-delay="600">
+            <button class="view-all-button" id="viewAllProjectsBtn">
+                <span>View All Projects</span>
+            </button>
         </div>
     </div>
 </section>
-
 
 
 
@@ -860,8 +991,8 @@
         <div class="logos-slider">
             <!-- Logos Repeated for Infinite Scroll -->
             <div class="logo-item">
-                <img src="logo/cybersage2.png" alt="Brand 1" class="logo-dark">
-                <img src="logo/cybersage2.png" alt="Brand 1" class="logo-light">
+                <img src="logo/cybersage2.png" alt="CyberSage" class="logo-dark">
+                <img src="logo/cybersage2.png" alt="CyberSage" class="logo-light">
             </div>
             <!-- <div class="logo-item">
                 <img src="logo/Kic's-Logo-Transparent.png" alt="Brand 2" class="logo-light">
@@ -872,22 +1003,27 @@
                 <img src="logo/icon.png" alt="Brand 3" class="logo-dark">
             </div>
             <div class="logo-item">
-                <img src="logo/RokeylaSecondaryLogoBlack.png" alt="Brand 4" class="logo-light">
-                <img src="logo/RokeylaSecondaryLogoWhite.png" alt="Brand 4" class="logo-dark">
+                <img src="logo/RokeylaSecondaryLogoBlack.png" alt="ROKEYLA" class="logo-light">
+                <img src="logo/RokeylaSecondaryLogoWhite.png" alt="ROKEYLA" class="logo-dark">
             </div>
             <div class="logo-item">
-                <img src="logo/samdus trans.png" alt="Brand 5" class="logo-light">
-                <img src="logo/samdus_white.png" alt="Brand 5" class="logo-dark">
-            </div>
-
-            <div class="logo-item">
-                <img src="logo/tech2.png" alt="Brand 6" class="logo-light">
-                <img src="logo/techwhite.png" alt="Brand 6" class="logo-dark">
+                <img src="logo/samdus trans.png" alt="Samdus" class="logo-light">
+                <img src="logo/samdus_white.png" alt="Samdus" class="logo-dark">
             </div>
 
             <div class="logo-item">
-                <img src=" logo/logo_invert.png" alt="Brand 7" class="logo-light">
-                <img src="logo/TQL LOGO 2-01.png" alt="Brand 7" class="logo-dark">
+                <img src="logo/tech2.png" alt="Techhub" class="logo-light">
+                <img src="logo/techwhite.png" alt="Techhub" class="logo-dark">
+            </div>
+
+            <div class="logo-item">
+                <img src=" logo/logo_invert.png" alt="Twerk Queen Lagos" class="logo-light">
+                <img src="logo/TQL LOGO 2-01.png" alt="Twerk Queen Lagos" class="logo-dark">
+            </div>
+
+               <div class="logo-item">
+                <img src="logo/NEXTGENPortraitBLACKtrans.png" alt="NextGenRobotics" class="logo-light">
+                <img src="logo/NEXTGENPortraitWHITEtrans.png" alt="NextGenRobotics" class="logo-dark">
             </div>
             <!-- Duplicate Logos for Smooth Infinite Scrolling -->
             <div class="logo-item">
@@ -903,8 +1039,8 @@
                 <img src="logo/icon.png" alt="Brand 3" class="logo-dark">
             </div>
             <div class="logo-item">
-                <img src="logo/RokeylaSecondaryLogoBlack.png" alt="Brand 4" class="logo-light">
-                <img src="logo/RokeylaSecondaryLogoWhite.png" alt="Brand 4" class="logo-dark">
+                <img src="logo/RokeylaSecondaryLogoBlack.png" alt="ROKEYLA"ass="logo-light">
+                <img src="logo/RokeylaSecondaryLogoWhite.png" alt="ROKEYLA" class="logo-dark">
             </div>
             <div class="logo-item">
                 <img src="logo/samdus trans.png" alt="Brand 5" class="logo-light">
@@ -918,6 +1054,10 @@
             <div class="logo-item">
                 <img src=" logo/logo_invert.png" alt="Brand 7" class="logo-light">
                 <img src="logo/TQL LOGO 2-01.png" alt="Brand 7" class="logo-dark">
+            </div>
+                   <div class="logo-item">
+                <img src="logo/NEXTGENPortraitBLACKtrans.png" alt="NextGenRobotics"lass="logo-light">
+                <img src="logo/NEXTGENPortraitWHITEtrans.png" alt="NextGenRobotics" class="logo-dark">
             </div>
         </div>
     </div>
@@ -1111,6 +1251,8 @@
 <!-- GSAP & JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="dist/main.js"></script>
@@ -1122,22 +1264,147 @@
 
     
 
-    document.getElementById('viewAllProjectsBtn').addEventListener('click', function () {
-        const hiddenProjects = document.querySelector('.hidden-projects');
-        hiddenProjects.style.display = hiddenProjects.style.display === 'none' ? 'block' : 'none';
-        this.textContent = hiddenProjects.style.display === 'none' ? 'View All Projects' : 'Show Less';
+
+// Enhanced Projects Section JavaScript - 2025 Edition
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Vanilla Tilt for all project items
+    const tiltElements = document.querySelectorAll('.js-tilt');
+    
+    if (typeof VanillaTilt !== 'undefined') {
+        VanillaTilt.init(tiltElements, {
+            max: 8,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.3,
+            gyroscope: true,
+            scale: 1.03,
+            perspective: 1000,
+            transition: true,
+            easing: "cubic-bezier(.03,.98,.52,.99)"
+        });
+    }
+    
+    // Project hover animation refinements
+    const projectItems = document.querySelectorAll('.project-item');
+    projectItems.forEach(project => {
+        project.addEventListener('mouseenter', function() {
+            // Add a subtle active state to neighboring projects
+            const sibling = this.nextElementSibling || this.previousElementSibling;
+            if (sibling && sibling.classList.contains('project-item')) {
+                sibling.style.transform = 'scale(0.98)';
+                sibling.style.filter = 'brightness(0.8)';
+            }
+        });
+        
+        project.addEventListener('mouseleave', function() {
+            // Remove effects from all projects
+            projectItems.forEach(item => {
+                item.style.transform = '';
+                item.style.filter = '';
+            });
+        });
     });
-
-
-
+    
+    // Parallax effect for project section
+    const projectsSection = document.querySelector('.projects-section');
+    if (projectsSection) {
+        window.addEventListener('scroll', function() {
+            const scrollPosition = window.scrollY;
+            const sectionTop = projectsSection.offsetTop;
+            const sectionHeight = projectsSection.offsetHeight;
+            
+            // Check if section is in view
+            if (scrollPosition > sectionTop - window.innerHeight && 
+                scrollPosition < sectionTop + sectionHeight) {
+                const distance = scrollPosition - sectionTop + window.innerHeight;
+                const parallaxSpeed = distance * 0.05;
+                
+                // Apply subtle parallax to background
+                projectsSection.style.backgroundPosition = `center ${parallaxSpeed}px`;
+            }
+        });
+    }
+    
+    // Add staggered animation delay to project items for initial load
+    const visibleProjects = document.querySelectorAll('.projects-grid > .project-row > .project-item');
+    visibleProjects.forEach((project, index) => {
+        project.setAttribute('data-aos-delay', 100 + (index * 100));
+    });
+});
+    
+    // Adjust tilt settings for mobile
+    function adjustTiltForMobile() {
+        if (window.innerWidth <= 768 && typeof VanillaTilt !== 'undefined') {
+            VanillaTilt.init(tiltElements, {
+                max: 5, // Reduce tilt effect on mobile
+                speed: 200,
+                glare: false,
+                scale: 1.01
+            });
+        }
+    }
+    
+    // Run on load and resize
+    adjustTiltForMobile();
+    window.addEventListener('resize', adjustTiltForMobile);
+    
+    // "View All Projects" button functionality with smooth animation
+    const viewAllBtn = document.getElementById('viewAllProjectsBtn');
+    const hiddenProjects = document.getElementById('hiddenProjects');
+    
+    if (viewAllBtn && hiddenProjects) {
+        viewAllBtn.addEventListener('click', function() {
+            // Toggle visibility with animation
+            if (!hiddenProjects.classList.contains('visible')) {
+                hiddenProjects.classList.add('visible');
+                viewAllBtn.querySelector('span').textContent = 'Show Less';
+                
+                // Initialize AOS for newly visible elements
+                if (typeof AOS !== 'undefined') {
+                    setTimeout(() => {
+                        AOS.refresh();
+                    }, 100);
+                }
+                
+                // Initialize Vanilla Tilt for newly visible elements
+                const newTiltElements = hiddenProjects.querySelectorAll('.js-tilt');
+                if (typeof VanillaTilt !== 'undefined') {
+                    VanillaTilt.init(newTiltElements, {
+                        max: 8,
+                        speed: 400,
+                        glare: true,
+                        "max-glare": 0.3,
+                        scale: 1.03
+                    });
+                }
+                
+                // Smooth scroll to first hidden project
+                setTimeout(() => {
+                    const firstHiddenProject = hiddenProjects.querySelector('.project-item');
+                    if (firstHiddenProject) {
+                        firstHiddenProject.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }, 400);
+            } else {
+                hiddenProjects.classList.remove('visible');
+                viewAllBtn.querySelector('span').textContent = 'View All Projects';
+                
+                // Smooth scroll back to button
+                setTimeout(() => {
+                    viewAllBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 100);
+            }})}
 // Select the checkbox input and navigation links
 
     // === Navigation Toggle and Smooth Scrolling ===
 
     // Select the checkbox input and navigation links
-    const navToggle = document.getElementById('nav-toggle');
-    const navLinks = document.querySelector('nav .nav-links');
-
+     const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
+        const navbar = document.getElementById('navbar');
+        const burger = document.querySelector('.burger');
     // Function to show or hide the navigation menu
     function toggleNav() {
         if (navToggle.checked) {
@@ -1189,119 +1456,509 @@
             }
         });
     });
-
+   // Add resize listener to handle mobile/desktop transitions
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navToggle.checked = false;
+                navLinks.classList.remove('show-links');
+                navOverlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        });
 
 
     // GSAP Animation for Hero Words
   // Modify your GSAP animations with ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+// Register GSAP plugins
+gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrollToPlugin);
+      // Loading animation
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').classList.add('hidden');
+                initAnimations();
+            }, 1500);
+        });
 
-// Animate word-1 with horizontal movement and rotation
-gsap.to(".word-1", {
-  x: "-20vw",
-  rotate: -5,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".hero-section",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1,
-    invalidateOnRefresh: true
-  }
-});
+        function initAnimations() {
+            // Enhanced GSAP Animations
+            
+            // Staggered letter animation for split text
+            gsap.fromTo(".split-text span", 
+                { 
+                    opacity: 0, 
+                    y: 100, 
+                    rotationX: -90 
+                },
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    rotationX: 0, 
+                    duration: 1.2, 
+                    stagger: 0.1, 
+                    ease: "power3.out",
+                    delay: 0.5
+                }
+            );
 
-// Animate word-2 with vertical movement and scale
-gsap.to(".word-2", {
-  y: "10vh",
-  scale: 0.95,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".hero-section",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1,
-    invalidateOnRefresh: true
-  }
-});
+            // Hero text glass morphism entrance
+            gsap.fromTo(".hero-text", 
+                { 
+                    opacity: 0, 
+                    scale: 0.8, 
+                    y: 50,
+                    filter: "blur(20px)"
+                },
+                { 
+                    opacity: 1, 
+                    scale: 1, 
+                    y: 0,
+                    filter: "blur(0px)",
+                    duration: 1.5, 
+                    ease: "power3.out",
+                    delay: 1.8
+                }
+            );
 
-// Animate word-3 with horizontal movement and rotation
-gsap.to(".word-3", {
-  x: "20vw",
-  rotate: 5,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".hero-section",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1,
-    invalidateOnRefresh: true
-  }
-});
+            // Status badge animation
+            gsap.fromTo(".status-badge", 
+                { opacity: 0, y: -30 },
+                { opacity: 1, y: 0, duration: 1, ease: "power2.out", delay: 2.5 }
+            );
 
-// Add parallax effect to decorative elements
-gsap.to(".parallax-1", {
-  y: "-50%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".hero-section",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1
-  }
-});
+            // Enhanced scroll-triggered animations
+            gsap.to(".word-1", {
+                x: "-25vw",
+                rotate: -8,
+                scale: 0.8,
+                filter: "blur(3px)",
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".hero-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1.5,
+                    invalidateOnRefresh: true
+                }
+            });
 
-gsap.to(".parallax-2", {
-  y: "50%",
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".hero-section",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1
-  }
-});
+            gsap.to(".word-2", {
+                y: "15vh",
+                scale: 0.85,
+                filter: "blur(5px)",
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".hero-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1.5,
+                    invalidateOnRefresh: true
+                }
+            });
 
-// Add smooth blur effect on scroll
-gsap.to(".word", {
-  filter: "blur(5px)",
-  opacity: 0.6,
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".hero-section",
-    start: "center center",
-    end: "bottom bottom",
-    scrub: 1,
-    invalidateOnRefresh: true
-  }
-});
+            gsap.to(".word-3", {
+                x: "25vw",
+                rotate: 8,
+                scale: 0.8,
+                filter: "blur(3px)",
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".hero-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1.5,
+                    invalidateOnRefresh: true
+                }
+            });
 
-// Keep center text fixed
-gsap.to(".hero-text", {
-  y: "50vh",
-  ease: "power3.out",
-  scrollTrigger: {
-    trigger: ".hero-section",
-    start: "top top",
-    end: "bottom bottom",
-    scrub: 1
-  }
-});
+            // Enhanced parallax for decorative elements
+            gsap.to(".parallax-1", {
+                y: "-60%",
+                x: "30%",
+                scale: 1.3,
+                filter: "blur(150px)",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".hero-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 2
+                }
+            });
 
-gsap.fromTo('.introduction-content', 
-    { opacity: 0, y: 50 }, // Initial state: Hidden and moved down
-    { 
-      opacity: 1, 
-      y: 0, 
-      duration: 1.5, 
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.introduction-section',
-        start: 'top 75%', // Trigger when top of section reaches 75% of viewport height
-        end: 'bottom 25%', // Continue until section bottom is at 25%
-        scrub: true // Smooth scrolling effect
-      }
-    }
-);
+            gsap.to(".parallax-2", {
+                y: "60%",
+                x: "-30%",
+                scale: 0.7,
+                filter: "blur(180px)",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".hero-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 2
+                }
+            });
+
+            gsap.to(".parallax-3", {
+                y: "-40%",
+                x: "-20%",
+                scale: 1.1,
+                filter: "blur(140px)",
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".hero-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1.5
+                }
+            });
+
+            // Hero text scroll behavior
+            gsap.to(".hero-text", {
+                y: "80vh",
+                scale: 0.6,
+                opacity: 0.3,
+                filter: "blur(10px)",
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".hero-section",
+                    start: "top top",
+                    end: "bottom bottom",
+                    scrub: 1.5
+                }
+            });
+
+            // Particles floating animation enhancement
+            gsap.to(".particle", {
+                y: "random(-100, 100)",
+                x: "random(-50, 50)",
+                scale: "random(0.5, 1.5)",
+                duration: "random(3, 6)",
+                ease: "sine.inOut",
+                stagger: 0.5,
+                repeat: -1,
+                yoyo: true
+            });
+
+            // Introduction section animation
+            gsap.fromTo('.introduction-content',
+                { opacity: 0, y: 80, filter: "blur(10px)" },
+                {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    duration: 1.8,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: '.introduction-section',
+                        start: 'top 75%',
+                        end: 'bottom 25%',
+                        scrub: 1.5
+                    }
+                }
+            );
+
+            // Mouse movement parallax effect
+            document.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                gsap.to('.parallax-1', { 
+                    x: `+=${(mouseX - 0.5) * 50}px`, 
+                    y: `+=${(mouseY - 0.5) * 50}px`, 
+                    duration: 1.5, 
+                    ease: 'power2.out' 
+                });
+                
+                gsap.to('.parallax-2', { 
+                    x: `+=${(mouseX - 0.5) * -30}px`, 
+                    y: `+=${(mouseY - 0.5) * -30}px`, 
+                    duration: 1.5, 
+                    ease: 'power2.out' 
+                });
+                
+                gsap.to('.hero-text', { 
+                    rotationX: (mouseY - 0.5) * 5, 
+                    rotationY: (mouseX - 0.5) * 5, 
+                    duration: 1, 
+                    ease: 'power2.out' 
+                });
+            });
+
+            // Letter hover effects
+            document.querySelectorAll('.split-text span').forEach(span => {
+                span.addEventListener('mouseenter', () => {
+                    gsap.to(span, {
+                        scale: 1.2,
+                        z: 50,
+                        duration: 0.3,
+                        ease: "back.out(1.7)"
+                    });
+                });
+                
+                span.addEventListener('mouseleave', () => {
+                    gsap.to(span, {
+                        scale: 1,
+                        z: 0,
+                        duration: 0.3,
+                        ease: "power2.out"
+                    });
+                });
+            });
+        }
+
+        // Smooth scroll for scroll indicator
+        document.querySelector('.scroll-indicator').addEventListener('click', () => {
+            gsap.to(window, {duration: 2, scrollTo: ".introduction-section", ease: "power2.inOut"});
+        });
+
+
+       // Advanced text typing effect
+        const heroTitle = document.querySelector('.hero-title');
+        const heroSubtitle = document.querySelector('.hero-subtitle');
+        
+        setTimeout(() => {
+            gsap.to(heroTitle, {
+                duration: 2,
+                text: "ABAKWE<br>CARRINGTON",
+                ease: "none",
+                delay: 3
+            });
+            
+            gsap.to(heroSubtitle, {
+                duration: 2,
+                text: "FULL-STACK DEVELOPER<br>DIGITAL ARCHITECT",
+                ease: "none",
+                delay: 3.5
+            });
+        }, 1000);
+
+              // Interactive grid on mouse move
+        const grid = document.querySelector('.cyber-grid');
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            grid.style.setProperty('--mouse-x', x);
+            grid.style.setProperty('--mouse-y', y);
+            
+            // Update grid background position based on mouse
+            gsap.to(grid, {
+                backgroundPosition: `${x * 100}px ${y * 100}px`,
+                duration: 1,
+                ease: "power2.out"
+            });
+        });
+
+
+        // Scroll progress indicator
+        const scrollProgress = document.createElement('div');
+        scrollProgress.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), #ff6b6b);
+            z-index: 10000;
+            transition: width 0.3s ease;
+        `;
+        document.body.appendChild(scrollProgress);
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Dynamic background color changes
+        ScrollTrigger.create({
+            trigger: ".introduction-section",
+            start: "top center",
+            end: "bottom center",
+            onEnter: () => {
+                gsap.to('body', {
+                    backgroundColor: '#0a0a0a',
+                    duration: 1,
+                    ease: "power2.inOut"
+                });
+            },
+            onLeave: () => {
+                gsap.to('body', {
+                    backgroundColor: 'var(--background-color)',
+                    duration: 1,
+                    ease: "power2.inOut"
+                });
+            },
+            onEnterBack: () => {
+                gsap.to('body', {
+                    backgroundColor: '#0a0a0a',
+                    duration: 1,
+                    ease: "power2.inOut"
+                });
+            },
+            onLeaveBack: () => {
+                gsap.to('body', {
+                    backgroundColor: 'var(--background-color)',
+                    duration: 1,
+                    ease: "power2.inOut"
+                });
+            }
+        });
+
+        // Magnetic effect for hero text
+        const heroTextEl = document.querySelector('.hero-text');
+        let magneticZone = false;
+
+        heroTextEl.addEventListener('mouseenter', () => {
+            magneticZone = true;
+            gsap.to(heroTextEl, {
+                scale: 1.05,
+                duration: 0.5,
+                ease: "power2.out"
+            });
+        });
+
+        heroTextEl.addEventListener('mouseleave', () => {
+            magneticZone = false;
+            gsap.to(heroTextEl, {
+                scale: 1,
+                x: 0,
+                y: 0,
+                duration: 0.5,
+                ease: "power2.out"
+            });
+        });
+
+        heroTextEl.addEventListener('mousemove', (e) => {
+            if (magneticZone) {
+                const rect = heroTextEl.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                const deltaX = (e.clientX - centerX) * 0.1;
+                const deltaY = (e.clientY - centerY) * 0.1;
+
+                gsap.to(heroTextEl, {
+                    x: deltaX,
+                    y: deltaY,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            }
+        });
+
+        // Intersection Observer for performance optimization
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.word, .parallax, .hero-text').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Performance monitoring and optimization
+        let fps = 60;
+        let lastTime = performance.now();
+        
+        function checkFPS() {
+            const now = performance.now();
+            fps = 1000 / (now - lastTime);
+            lastTime = now;
+            
+            // Reduce animations if FPS is too low
+            if (fps < 30) {
+                document.body.style.setProperty('--movement-intensity', '0.5');
+                document.querySelectorAll('.particle').forEach(p => p.style.opacity = '0.05');
+            }
+            
+            requestAnimationFrame(checkFPS);
+        }
+        
+        requestAnimationFrame(checkFPS);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === ' ') {
+                e.preventDefault();
+                gsap.to(window, {
+                    duration: 1.5,
+                    scrollTo: ".introduction-section",
+                    ease: "power2.inOut"
+                });
+            }
+        });
+
+        // Custom cursor for modern interaction
+        const cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        cursor.style.cssText = `
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.1s ease;
+        `;
+        document.body.appendChild(cursor);
+
+        let cursorX = 0;
+        let cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            cursorX = e.clientX;
+            cursorY = e.clientY;
+            
+            gsap.to(cursor, {
+                x: cursorX - 10,
+                y: cursorY - 10,
+                duration: 0.1,
+                ease: "power2.out"
+            });
+        });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+        });
+
+        // Hover effects for interactive elements
+        document.querySelectorAll('.split-text span, .hero-text, .status-badge').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                gsap.to(cursor, {
+                    scale: 2,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                gsap.to(cursor, {
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+            });
+        });
+    
+
+
+
+
+
+
+
 
     // Initialize AOS
     AOS.init({
@@ -1345,16 +2002,14 @@ VanillaTilt.init(document.querySelectorAll('.project-item'), {
     "max-glare": 0.2,
 });
 
-
-// Existing JavaScript code...
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('themeToggle');
-
+    
     if (!themeToggle) {
         console.error('Theme toggle checkbox not found!');
         return;
     }
-
+    
     function setTheme(theme) {
         if (theme === 'light') {
             document.body.classList.add('light-mode');
@@ -1364,15 +2019,16 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggle.checked = false;
         }
     }
-
+    
     function getCurrentTimeTheme() {
         const currentHour = new Date().getHours();
-        return currentHour >= 6 && currentHour < 18 ? 'light' : 'dark';
+        // Reversed logic: dark during day, light during night
+        return currentHour >= 6 && currentHour < 18 ? 'dark' : 'light';
     }
-
+    
     function determineTheme() {
         const userPreference = localStorage.getItem('theme');
-
+        
         if (userPreference) {
             setTheme(userPreference);
         } else {
@@ -1380,11 +2036,11 @@ document.addEventListener('DOMContentLoaded', () => {
             setTheme(timeTheme);
         }
     }
-
+    
     function scheduleNextThemeSwitch() {
         const now = new Date();
         const nextSwitch = new Date();
-
+        
         if (now.getHours() >= 6 && now.getHours() < 18) {
             // Daytime: next switch at 6 PM
             nextSwitch.setHours(18, 0, 0, 0);
@@ -1395,7 +2051,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 nextSwitch.setDate(now.getDate() + 1); // move to next day
             }
         }
-
+        
         const timeoutDuration = nextSwitch - now;
         setTimeout(() => {
             if (!localStorage.getItem('theme')) {
@@ -1406,7 +2062,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, timeoutDuration);
     }
-
+    
     // Event listener for toggle
     themeToggle.addEventListener('change', () => {
         if (themeToggle.checked) {
@@ -1417,11 +2073,11 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'dark');
         }
     });
-
+    
     // Initialize theme
     determineTheme();
     scheduleNextThemeSwitch();
-
+    
     // Listen for system changes (optional)
     if (window.matchMedia) {
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -1433,6 +2089,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
 
 // Pause and Resume Scrolling on Hover
 const logosSlider = document.querySelector('.logos-slider');

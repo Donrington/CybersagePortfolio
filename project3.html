@@ -86,8 +86,12 @@
     </div>
     
     <!-- Navigation Bar -->
-    <nav>
-        <h2> <img src="circle2.png" alt="CyberSage Logo" class="logo-image fa fa-fade"> CyberSage</h2>
+    <nav id="navbar">
+        <h2>
+            <img src="circle2.png" alt="CyberSage Logo" class="logo-image fa fa-fade">
+            CyberSage
+        </h2>
+        
         <!-- Burger Menu Trigger -->
         <label class="burger" for="nav-toggle">
             <input type="checkbox" id="nav-toggle">
@@ -95,14 +99,15 @@
             <span></span>
             <span></span>
         </label>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#details">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <!-- Add or adjust other links as needed -->
+        
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#details">Details</a></li>
+             <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+         
         </ul>
     </nav>
-
     <!-- Theme Toggle Button -->
     <div class="theme-toggle">
         <label for="themeToggle" class="themeToggle st-sunMoonThemeToggleBtn">
