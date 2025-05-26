@@ -2649,8 +2649,9 @@ text-align: center;
     }
     
     .testimonial-card {
-        padding: 70px 30px 40px;
-        width:50%;
+
+        width:80%;
+        max-width:350px;
     }
     
     .testimonial-text {
