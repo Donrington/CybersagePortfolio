@@ -1315,11 +1315,17 @@
     </div>
 </footer>
 
-<button class="Btn" id="backToTopBtn" aria-label="Back to Top">
-    <svg height="1.2em" class="arrow" viewBox="0 0 512 512">
-        <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
-    </svg>
-    <p class="text">Back to Top</p>
+<button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+    <div class="btn-inner">
+        <div class="glow-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="icon-container">
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none">
+                <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <span class="tooltip">Back to Top</span>
+    </div>
 </button>
 
 
@@ -2411,29 +2417,85 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Back to Top Button Functionality
+// Enhanced Back to Top Button Functionality
 document.addEventListener('DOMContentLoaded', () => {
     const backToTopBtn = document.getElementById('backToTopBtn');
+    let isVisible = false;
+    let scrollThreshold = 300;
+    let ticking = false;
 
-    // Show or hide the button based on scroll position
+    // Optimized scroll handler with throttling
+    function updateButtonVisibility() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const shouldShow = scrollTop > scrollThreshold;
+
+        if (shouldShow && !isVisible) {
+            backToTopBtn.classList.add('show');
+            isVisible = true;
+        } else if (!shouldShow && isVisible) {
+            backToTopBtn.classList.remove('show');
+            isVisible = false;
+        }
+        ticking = false;
+    }
+
+    // Throttled scroll event listener
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) { // Show after scrolling down 300px
-            backToTopBtn.style.display = 'flex';
-        } else {
-            backToTopBtn.style.display = 'none';
+        if (!ticking) {
+            requestAnimationFrame(updateButtonVisibility);
+            ticking = true;
         }
     });
 
-    // Initial hide
-    backToTopBtn.style.display = 'none';
+    // Enhanced click handler with haptic feedback
+    backToTopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        // Add active animation class temporarily
+        backToTopBtn.classList.add('clicking');
+        setTimeout(() => {
+            backToTopBtn.classList.remove('clicking');
+        }, 150);
 
-    // Scroll to top smoothly on button click
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        // Haptic feedback for mobile devices
+        if (navigator.vibrate) {
+            navigator.vibrate(50);
+        }
+
+        // Smooth scroll to top with custom easing
+        const startPosition = window.pageYOffset;
+        const startTime = performance.now();
+        const duration = 800; // Animation duration in ms
+
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
+        function scrollAnimation(currentTime) {
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            const easedProgress = easeOutCubic(progress);
+            
+            window.scrollTo(0, startPosition * (1 - easedProgress));
+            
+            if (progress < 1) {
+                requestAnimationFrame(scrollAnimation);
+            }
+        }
+
+        requestAnimationFrame(scrollAnimation);
     });
+
+    // Add keyboard support for accessibility
+    backToTopBtn.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            backToTopBtn.click();
+        }
+    });
+
+    // Initial state
+    updateButtonVisibility();
 });
 
 
