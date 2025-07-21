@@ -1330,6 +1330,7 @@ section {
     }
     
     .status-badge {
+      margin-top: 100px;
         top: 1rem;
         right: 1rem;
         font-size: 0.7rem;
