@@ -10,6 +10,13 @@
         <meta name="description" content="CyberSage - Empowering businesses with cutting-edge technology solutions. Explore our portfolio to see how we innovate and deliver exceptional results." />
         <meta name="keywords" content="Abakwe Carrington, CyberSage, Technology Solutions, Business Innovation, Portfolio, Software Development, IT Services, Cutting-edge Technology" />
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Abakwe Carrington" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="distribution" content="global" />
+        <meta name="rating" content="general" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow" />
     
         <!-- Open Graph Meta Tags for Social Media -->
         <meta property="og:title" content="CyberSage | Empowering Technology Solutions" />
@@ -25,8 +32,16 @@
         <meta name="twitter:description" content="Explore Abakwe Carrington's portfolio of innovative technology solutions that drive business success. Let's collaborate and innovate together." />
         <meta name="twitter:image" content="https://cybersage-portfolio.vercel.app/images/twitter-image.jpg" />
     
-        <!-- Favicon -->
+        <!-- Favicon and PWA Icons -->
         <link rel="icon" href="circle2.png" type="image/png" />
+        <link rel="apple-touch-icon" href="circle2.png" />
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#1a1a1a" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="CyberSage" />
+        <meta name="msapplication-TileColor" content="#1a1a1a" />
+        <meta name="msapplication-TileImage" content="circle2.png" />
     
         <!-- Canonical Link -->
         <link rel="canonical" href="https://cybersage-portfolio.vercel.app/" />
@@ -57,7 +72,7 @@
           "@type": "Organization",
           "name": "Abakwe Carrington",
           "url": "https://cybersage-portfolio.vercel.app/",
-          "logo": "https://cybersage-portfolio.vercel.app/images/circle2.png",
+          "logo": "circle2.png",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+234-702-549-5506",
@@ -550,18 +565,18 @@
                 <!-- Project 5 -->
                 <div class="project-item size-small js-tilt" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.2">
                     <div class="project-image-wrapper">
-                        <a href="https://twerkqueenlagos.com/">
-                            <img src="projects/twerkqueenlagos.jpg" alt="Project 5" class="project-image" loading="lazy">
+                        <a href="https://deetsnigeria.org/">
+                            <img src="projects/deets.png" alt="Project 5" class="project-image" loading="lazy">
                             <div class="overlay">
                                 <div class="project-info">
-                                    <i class="project-icon fas fa-music"></i>
-                                    <h3 class="project-title">The Ultimate Dance Showdown</h3>
-                                    <p class="project-categories">Web App, Event Website</p>
+                                    <i class="project-icon fas fa-industry"></i>
+                                    <h3 class="project-title">Deets Nigeria</h3>
+                                    <p class="project-categories"> Manufacturing Industry</p>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <p class="project-quote"><em>"Experience the Heartbeat of Afrobeat in Lagos."</em></p>
+                    <p class="project-quote"><em>"Innovation in Training & Manufacturing."</em></p>
                 </div>
                 
                 <!-- Project 6 -->
@@ -726,6 +741,22 @@
                                         <i class="project-icon fas fa-file-alt"></i>
                                         <h3 class="project-title">ResuGlow</h3>
                                         <p class="project-categories">Web App, Utility</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <p class="project-quote"><em>"Build Your Professional Resume."</em></p>
+                    </div>
+
+                        <div class="project-item size-medium js-tilt" data-aos="fade-up" data-aos-delay="400" data-tilt data-tilt-max="8" data-tilt-speed="400" data-tilt-glare data-tilt-max-glare="0.15">
+                        <div class="project-image-wrapper">
+                            <a href="https://">
+                                <img src="projects/twerkqueenlagos.jpg" alt="Project 14" class="project-image" loading="lazy">
+                                <div class="overlay">
+                                    <div class="project-info">
+                                        <i class="project-icon fas fa-file-alt"></i>
+                                        <h3 class="project-title">Twerk Queen Lagos</h3>
+                                        <p class="project-categories">Web App, Event</p>
                                     </div>
                                 </div>
                             </a>
@@ -2017,6 +2048,19 @@ gsap.registerPlugin(ScrollTrigger, TextPlugin, ScrollToPlugin);
         once: true, // Animation happens only once, not every time you scroll
         easing: 'ease-out-quart', // Easing type for animations
     });
+
+    // Register Service Worker for PWA
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
 
 
 
